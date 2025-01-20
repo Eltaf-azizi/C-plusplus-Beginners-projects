@@ -55,3 +55,24 @@ void temp :: signUP() {
     file<<userName<<"*"<<Email<<"*"<<password<<endl;
     file.close();
 }
+
+void temp :: login(){
+    string searchName, searchPass;
+    cout << "---------LOGIN---------"<< endl;
+    cout << "Enter Your User Name :: " << endl;
+    getline(cin, searchName);
+    cout << "Enter Your Password :: " endl;
+    getline(cin, searchPass);
+
+    file.open("loginData.txt", ios, :: in);
+    getline(file, userName, '*');
+    getline(file, Email, '*');
+    getline(file,password, '\n');
+    while(!file.eof()){
+        if (userName == searchPass) {
+            cout << "\nAccount Login Successfull...!";
+            cout << "\nUsername :: " << userName,,endl;
+            cout<< "\nEmail :: "<<Email <<endl;
+        }
+    }
+}
