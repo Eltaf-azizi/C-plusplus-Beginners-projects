@@ -6,6 +6,7 @@ using namespace std;
 class temp{
     
     string userName, Email, password;
+    string searchName, searchPass, searchEmail;
     fstram file;
     public:
     void login();
@@ -28,15 +29,19 @@ int main() {
     switch(choice){
 
         case '1':
+            obj.login();
         break;
 
         case '2':
+            obj.signUP();
         break;
 
         case '3':
+            obj.forgot();
         break;
 
         case '4':
+            return 0;
         break;
 
         default:
@@ -87,5 +92,29 @@ void temp :: login(){
     file.close();
 }
 void temp :: forgot(){
-    
+    cout << "Enter your UserName ::";
+    getline(cin, userName);
+    cout << "Enter Your Email address";
+    getline(cin, searchEmail);
+
+    file.open("loginData.txt", ios :: in);
+    getline(file, userName, '*');
+    getline(file, Email, '*');
+    getline(file, password, '\n');
+
+    while(!file.eof()){
+        if(userName == searchName){
+            if(Email == searchEmail){
+                cout << "\nAccount Found...!" <<endl;
+                cout << "Your Password :: "<<password<<endl;
+            }
+            else{
+                cout << "Not Found...!\n";
+            }
+        }
+        else{
+            cout << "Not found...!\n";
+        }
+    }
+    file.close();
 }
