@@ -69,10 +69,23 @@ void temp :: login(){
     getline(file, Email, '*');
     getline(file,password, '\n');
     while(!file.eof()){
-        if (userName == searchPass) {
-            cout << "\nAccount Login Successfull...!";
-            cout << "\nUsername :: " << userName,,endl;
-            cout<< "\nEmail :: "<<Email <<endl;
+        if (userName == searchName) {
+            if (password == searchPass){
+                cout << "\nAccount Login Successfull...!";
+                cout << "\nUsername :: " << userName,,endl;
+                cout<< "\nEmail :: "<<Email <<endl;
+            }
+            else{
+                cout << "Password isIn correct!...";
+            }
         }
+
+    getline(file, userName, '*');
+    getline(file, Email, '*');
+    getline(file,password, '\n');
     }
+    file.close();
+}
+void temp :: forgot(){
+    
 }
