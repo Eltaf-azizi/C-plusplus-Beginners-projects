@@ -1,13 +1,12 @@
-#include <iosream>
+#include <iostream>
 #include <fstream>
 using namespace std;
-
 
 class temp{
     
     string userName, Email, password;
     string searchName, searchPass, searchEmail;
-    fstram file;
+    fstream file;
     public:
     void login();
     void signUP();
@@ -15,16 +14,15 @@ class temp{
 
 }obj;
 
-
-
 int main() {
     char choice;
-    cout <<"\1- Login";
-    cout <<"\2- Sign-Up";
-    cout <<"\3- Forgot Password";
-    cout <<"\4- Exit";
+    cout <<"\n1- Login";
+    cout <<"\n2- Sign-Up";
+    cout <<"\n3- Forgot Password";
+    cout <<"\n4- Exit";
     cout <<"\nEnter Your Choice :: ";
     cin>> choice;
+    cin.ignore(); // To ignore the newline character left in the buffer
 
     switch(choice){
 
@@ -64,12 +62,12 @@ void temp :: signUP() {
 void temp :: login(){
     string searchName, searchPass;
     cout << "---------LOGIN---------"<< endl;
-    cout << "Enter Your User Name :: " << endl;
+    cout << "Enter Your User Name :: ";
     getline(cin, searchName);
-    cout << "Enter Your Password :: " endl;
+    cout << "Enter Your Password :: ";
     getline(cin, searchPass);
 
-    file.open("loginData.txt", ios, :: in);
+    file.open("loginData.txt", ios :: in);
     getline(file, userName, '*');
     getline(file, Email, '*');
     getline(file,password, '\n');
@@ -77,11 +75,11 @@ void temp :: login(){
         if (userName == searchName) {
             if (password == searchPass){
                 cout << "\nAccount Login Successfull...!";
-                cout << "\nUsername :: " << userName,,endl;
+                cout << "\nUsername :: " << userName << endl;
                 cout<< "\nEmail :: "<<Email <<endl;
             }
             else{
-                cout << "Password isIn correct!...";
+                cout << "Password is incorrect!...";
             }
         }
 
@@ -94,7 +92,7 @@ void temp :: login(){
 void temp :: forgot(){
     cout << "Enter your UserName ::";
     getline(cin, userName);
-    cout << "Enter Your Email address";
+    cout << "Enter Your Email address :: ";
     getline(cin, searchEmail);
 
     file.open("loginData.txt", ios :: in);
