@@ -46,6 +46,7 @@ int main(){
     return 0;
 }
 
+
 void temp :: addBook(){
     cout << "\nEnter Book ID :: ";
     getline(cin, id);
@@ -55,5 +56,22 @@ void temp :: addBook(){
     getline(cin, author);
 
     file.open("bookData.txt",ios :: out | ios :: app);
-    
+    file<<id<<"*"<<name<<"*"<<author<<ednl;
+    file.close();
+}
+
+
+void temp :: showAll(){
+
+    file.open("bookData.txt", ios :: in);
+    getline(cin, id, '*');
+    getline(cin, name, '*');
+    getline(cin, author, '\n');
+
+    while(!file.eof()) {
+
+        cout << "\n\n";
+        cout << "\t\tBook Id \t\t\t Book Name \t\t\t Author's Name";
+    }
+
 }
