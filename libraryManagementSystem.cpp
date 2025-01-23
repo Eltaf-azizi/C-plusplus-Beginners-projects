@@ -2,6 +2,18 @@
 #include<fstream>
 using namespace std;
 
+
+class temp{
+
+    string id, name, author;
+    fstream file;
+    public:
+    void addBook();
+    void showAll();
+    void extractBook();
+
+}
+
 int main(){
 
     char choice;
@@ -28,6 +40,20 @@ int main(){
         break;
 
         default:
-        cout << "Invalid Choice";
+        cout << "Invalid Choice...!";
     }
+
+    return 0;
+}
+
+void temp :: addBook(){
+    cout << "\nEnter Book ID :: ";
+    getline(cin, id);
+    cout << "Enter Book Name :: ";
+    getline(cin, name);
+    cout << "Enter Book's Author Namme :: ";
+    getline(cin, author);
+
+    file.open("bookData.txt",ios :: out | ios :: app);
+    
 }
