@@ -37,7 +37,7 @@ int main(){
         break;
 
         case '4':
-        break;
+        break;     
 
         default:
         cout << "Invalid Choice...!";
@@ -56,7 +56,7 @@ void temp :: addBook(){
     getline(cin, author);
 
     file.open("bookData.txt",ios :: out | ios :: app);
-    file<<id<<"*"<<name<<"*"<<author<<ednl;
+    file<<id<<"*"<<name<<"*"<<author<<endl;
     file.close();
 }
 
@@ -67,11 +67,25 @@ void temp :: showAll(){
     getline(cin, id, '*');
     getline(cin, name, '*');
     getline(cin, author, '\n');
+    cout << "\n\n";
+    cout << "\t\tBook Id \t\t\t Book Name \t\t\t Author's Name"<<endl;
 
-    while(!file.eof()) {
 
-        cout << "\n\n";
-        cout << "\t\tBook Id \t\t\t Book Name \t\t\t Author's Name";
+    while(!file.eof()) {  
+        cout << "\t\t "<<id<<" \t\t\t "<<name<<" \t\t\t "<<author<<endl;
+        getline(file, id, '*');
+        getline(file, name, '*');
+        getline(file, author, '\n');
     }
 
+    file.close();
+}
+
+
+void temp :: extractBook(){
+
+    file.open("bookData.txt", ios :: in);
+    getline(file, id, '*');
+    getline(file, name, '*');
+    getline(file, author, '\n');
 }
