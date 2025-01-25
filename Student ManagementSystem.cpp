@@ -3,6 +3,15 @@
 using namespace std;
 
 
+class temp {
+    string rollNum, name, fName, address, search;
+    fstraem file;
+    public:
+    void addStu();
+    void viewStu();
+    void searchStu();
+};
+
 int main() {
     char choice;
     cout << "------------------------------------";
@@ -30,4 +39,17 @@ int main() {
         default:
         cout << "Invalid choice...!";
     }
+}
+
+
+void temp :: addStu() {
+
+    cout << "Enter Student Roll Number :: ";
+    getline(cin, rollNum);
+    cout << "Enter Student Name :: ";
+    getline(cin, name);
+    cout << "Enter Father Name :: ";
+    getline(cin, fName);
+    cout << "Enter Address :: ";
+    getline(cin, address);
 }
