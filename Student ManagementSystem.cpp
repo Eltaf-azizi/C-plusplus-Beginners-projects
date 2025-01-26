@@ -52,4 +52,37 @@ void temp :: addStu() {
     getline(cin, fName);
     cout << "Enter Address :: ";
     getline(cin, address);
+
+
+    file.open("stuData.txt", ios :: out | ios :: app);
+    file<<rollNum<<"*";
+    file<<name<<"*";
+    file<<fName<<"*";
+    file<<address<<endl;
+
+    file.close();
+}
+
+
+
+void temp :: viewStu() {
+
+    file.open("stuData.txt", ios :: in);
+    getline(file, rollNum, '*');
+    getline(file, name, '*');
+    getline(file, fName, '*');
+    getline(file, address, '\n');
+
+    while(!file.eof()) {
+        cout << "Student Roll Number :: "<<rollNum;
+        cout << "Student name :: "<<name;
+        cout << "Student Father Name :: "<<fName;
+        cout << "Student Address :: "<<address;
+
+
+        getline(file, rollNum, '*');
+        getline(file, name, '*');
+        getline(file, fName, '*');
+        getline(file, address, '\n');
+    }
 }
