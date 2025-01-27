@@ -85,4 +85,25 @@ void temp :: viewStu() {
         getline(file, fName, '*');
         getline(file, address, '\n');
     }
+    file.close();
+}
+
+
+void temp :: searchStu() {
+    
+    cout << "Enter Student Roll Number :: ";
+    getline(cin, search);
+
+    file.open("stuData.txt", ios :: in);
+    getline(file, rollNum, '*');
+    getline(file, name, '*');
+    getline(file, fName, '*');
+    getline(file, address, '\n');
+
+
+    while(!file.eof()) {
+        if(rollNum == search) {
+            
+        }
+    }
 }
