@@ -10,7 +10,7 @@ class temp {
     void addStu();
     void viewStu();
     void searchStu();
-};
+}obj;
 
 int main() {
     char choice;
@@ -25,15 +25,19 @@ int main() {
     switch(choice){
         
         case '1':
+            obj.addStu();
         break;
 
         case '2':
+            obj.viewStu();
         break;
 
         case '3';
+            obj.searchStu();
         break;
 
         case '4';
+            return 0;
         break;
 
         default:
@@ -103,7 +107,14 @@ void temp :: searchStu() {
 
     while(!file.eof()) {
         if(rollNum == search) {
-            
+            cout << "Student Roll Number :: " << rollNum;
+            cout << "Student Name :: " << name;
+            cout << "Student's Father Name :: " << fName;
+            cout << "Student address :: " << address;
         }
+        getline(file, rollNum, '*');
+        getline(file, name, '*');
+        getline(file, fName, '*');
+        getline(file, address, '\n');
     }
 }
