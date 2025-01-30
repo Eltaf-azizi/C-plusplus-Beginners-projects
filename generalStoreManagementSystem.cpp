@@ -1,6 +1,19 @@
 #include<iostream>
+#include<fstream>
 using namespace std;
 
+
+class temp{
+
+        string itemID, itemName;
+        int itemQuantity, itemPrice;   
+        fstream file;
+
+    public:
+    void addProduct(void);
+    void viewProduct(void);
+    void buyProduct(void);
+}obj;
 
 
 int main() {
@@ -17,6 +30,7 @@ int main() {
         break;
 
         case 0:
+            system("exit");
         break;
 
         default:
@@ -25,4 +39,15 @@ int main() {
     }
 
     return 0;
+}
+
+
+
+void temp :: addProduct() {
+
+    cout << "Enter Product ID :: ";
+    cout << "Enter Product Name :: ";
+    cout << "Enter Product Quantity :: ";
+    cout << "Enter Product Price :: ";
+    
 }
