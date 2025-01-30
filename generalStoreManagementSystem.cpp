@@ -46,8 +46,25 @@ int main() {
 void temp :: addProduct() {
 
     cout << "Enter Product ID :: ";
+    cin>>itemID;
     cout << "Enter Product Name :: ";
+    cin>>itemName;
     cout << "Enter Product Quantity :: ";
+    cin>>itemQuantity;
     cout << "Enter Product Price :: ";
+    cin>>itemPrice;
+
+    file.open("data.txt", ios, :: out | ios :: app);
+    file << itemID << "\t" << itemName << "\t" << itemQuantity << "\t" << itemPrice << endl;
+    file.close();
     
+}
+
+
+void temp :: viewProduct() {
+    file.open("data.txt", ios :: in);
+
+    while(!file.eof){
+        file>>itemID>>itemName>>itemQuantity>>itemPrice;
+    }
 }
