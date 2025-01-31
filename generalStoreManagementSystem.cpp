@@ -7,7 +7,8 @@ class temp{
 
         string itemID, itemName;
         int itemQuantity, itemPrice;   
-        fstream file;
+        fstream file, file1;
+        int totalAmount, quantity, itemRate;
 
     public:
     void addProduct(void);
@@ -66,5 +67,17 @@ void temp :: viewProduct() {
 
     while(!file.eof){
         file>>itemID>>itemName>>itemQuantity>>itemPrice;
+        cout<<"------------------------------------"<<;
+        cout << "Product Id\t\tProduct Name\t\tQuantity\t\tProduct Price"<<endl;
+        cout<<itemID<<"\t\t\t"<<itemName<<"\t\t\t"<<itemQuantity<<"\t\t\t"<<itemPrice<<endl;
+        cout<<"------------------------------------"<<;
     }
+    file.close();
+}
+
+
+void temp :: buyProduct() {
+
+    file.open("data.txt", ios :: in);
+    file.open("temp.txt", ios :: out | ios :: app);
 }
