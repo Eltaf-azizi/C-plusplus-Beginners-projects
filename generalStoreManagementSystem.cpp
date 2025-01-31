@@ -9,6 +9,7 @@ class temp{
         int itemQuantity, itemPrice;   
         fstream file, file1;
         int totalAmount, quantity, itemRate;
+        string search;
 
     public:
     void addProduct(void);
@@ -80,4 +81,34 @@ void temp :: buyProduct() {
 
     file.open("data.txt", ios :: in);
     file.open("temp.txt", ios :: out | ios :: app);
+    file>>itemID>>itemName>>itemQuantity>>itemPrice;
+
+    cout << "Enter Product ID :: ";
+    cin>>search;
+    cout << "Enter Quantity";
+    cin>>quantity;
+
+
+    while(!file.eof()) {
+        if (itemID == search){
+            itemQuantity = itemQuantity - quantity;
+            file1 << itemID << "\t" << itemName << "\t" << itemQuantity << "\t" << itemPrice << endl;
+
+            itemRate = quantity * itemPrice;
+            totalAmount = totalAmount + itemRate;
+            cout>>"------Payment Bill------"<<endl;
+            cout>>"------Payment Bill------"<<endl;
+
+        }else{
+
+            file1 << itemID << "\t" << itemName << "\t" << itemQuantity << "\t" << itemPrice << endl;
+        }
+
+        file>>itemID>>itemName>>itemQuantity>>itemPrice;
+    }
+    file.close();
+    file1.close();
+    remove("data.txt");
+    rename("temp.txt", data.txt);
+
 }
