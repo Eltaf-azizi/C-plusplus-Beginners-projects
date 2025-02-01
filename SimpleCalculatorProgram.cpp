@@ -9,6 +9,7 @@ class temp{
 
     void getValue1();
     void getValue2();
+    void getOp();
     void add();
     void sub();
     void mul();
@@ -20,4 +21,22 @@ int main() {
 
 
     return 0;
+}
+
+
+void temp :: getValue1() {
+    cout<<"Enter the Value :: ";
+    cin>>a;
+}
+
+
+void temp :: getValue2() {
+    cout<<"Enter the Value :: ";
+    cin>>b;
+}
+
+
+void temp :: getOp() {
+    cout<<"Enter the Operater :: ";
+    cin>>op;
 }
