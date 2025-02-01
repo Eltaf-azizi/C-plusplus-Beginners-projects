@@ -10,6 +10,7 @@ class temp{
         fstream file, file1;
         int totalAmount, quantity, itemRate;
         string search;
+        char _choice;
 
     public:
     void addProduct(void);
@@ -19,16 +20,20 @@ class temp{
 
 
 int main() {
+    char choice;
     
-    cout << "press 1 --> Start Shopping";
-    cout << "press 0 --> Exit";
+    cout << "press 1 --> Start Shopping"<<endl;
+    cout << "press 0 --> Exit"<<endl;
     cin>>choice;
 
     switch(choice) {
         case 'A':
+            obj.addProduct();
         break;
 
         case 1:
+            obj.viewProduct();
+            obj.buyProduct();
         break;
 
         case 0:
@@ -66,7 +71,8 @@ void temp :: addProduct() {
 void temp :: viewProduct() {
     file.open("data.txt", ios :: in);
 
-    while(!file.eof){
+    while (!file.eof())
+    {
         file>>itemID>>itemName>>itemQuantity>>itemPrice;
         cout<<"------------------------------------"<<;
         cout << "Product Id\t\tProduct Name\t\tQuantity\t\tProduct Price"<<endl;
@@ -78,6 +84,11 @@ void temp :: viewProduct() {
 
 
 void temp :: buyProduct() {
+    _choice = 'y';
+
+    while(_choice == 'y') {
+
+    
 
     file.open("data.txt", ios :: in);
     file.open("temp.txt", ios :: out | ios :: app);
@@ -96,8 +107,9 @@ void temp :: buyProduct() {
 
             itemRate = quantity * itemPrice;
             totalAmount = totalAmount + itemRate;
-            cout>>"------Payment Bill------"<<endl;
-            cout>>"------Payment Bill------"<<endl;
+            cout<<"------Payment Bill------"<<endl;
+            cout<<"Total Purchase Amount :: "<<totalAmount<<endl;
+            cout<<"------------------------"<<endl;
 
         }else{
 
@@ -111,4 +123,7 @@ void temp :: buyProduct() {
     remove("data.txt");
     rename("temp.txt", data.txt);
 
+    cout<< "\n Continue Shopping : (Y / N)";
+    cin>>_choice;
+    }
 }
