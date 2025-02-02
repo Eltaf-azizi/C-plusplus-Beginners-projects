@@ -40,3 +40,27 @@ void temp :: getOp() {
     cout<<"Enter the Operater :: ";
     cin>>op;
 }
+
+
+void temp :: add() {
+    c = a + b;
+    cout<<a<< " + "<<b<<" :: "<<c;
+}
+
+
+void temp :: sub() {
+    c = a - b;
+    cout<<a<< " - "<<b<<" :: "<<c;
+}
+
+
+void temp :: mul() {
+    c = a * b;
+    cout<<a<< " * "<<b<<" :: "<<c;
+}
+
+
+void temp :: divide() {
+    c = a / b;
+    cout<<a<< " / "<<b<<" :: "<<c;
+}
