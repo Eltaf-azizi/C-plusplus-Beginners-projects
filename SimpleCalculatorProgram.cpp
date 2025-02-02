@@ -19,7 +19,29 @@ class temp{
 
 int main() {
 
+    obj.getValue1();
 
+    while (1){
+    obj.getOp();
+    if (obj.op == '='){
+        cout<<"\nFinal answer :: "<<obj.a<<endl;
+        break;
+        return 1;
+    }
+    obj.getValue2();
+
+    if(obj.op == '+')
+        obj.add();
+
+    if(obj.op == '-')
+        obj.sub();
+
+    if(obj.op == '*')
+        obj.mul();
+
+    if(obj.op == '/')
+        obj.divide();
+    }
     return 0;
 }
 
@@ -44,23 +66,31 @@ void temp :: getOp() {
 
 void temp :: add() {
     c = a + b;
-    cout<<a<< " + "<<b<<" :: "<<c;
+    cout<<a<< " + "<<b<<" :: "<<c <<endl;
+    a = c;
+    b = 0;
 }
 
 
 void temp :: sub() {
     c = a - b;
-    cout<<a<< " - "<<b<<" :: "<<c;
+    cout<<a<< " - "<<b<<" :: "<<c <<endl;
+    a = c;
+    b = 0;
 }
 
 
 void temp :: mul() {
     c = a * b;
-    cout<<a<< " * "<<b<<" :: "<<c;
+    cout<<a<< " * "<<b<<" :: "<<c <<endl;
+    a = c;
+    b = 0;
 }
 
 
 void temp :: divide() {
     c = a / b;
-    cout<<a<< " / "<<b<<" :: "<<c;
+    cout<<a<< " / "<<b<<" :: "<<c <<endl; 
+    a = c;
+    b = 0;
 }
