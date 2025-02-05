@@ -2,7 +2,7 @@
 using namespace std;
 
 
-class findGrade(
+class findGrade{
     float q1, q2, qT, midMarks, finalMarks;
     float percentage, percQ, percM, percF;
     string grade;
@@ -12,10 +12,15 @@ class findGrade(
     void calcMarks();
     void calcGrade();
     void showGrade();
-)
+}obj;
+
 int main() {
 
-
+    obj.getMarks();
+    obj.calcMarks();
+    obj.caalcGrade();
+    obj.showGrade();
+    
     return 0;
 }
 
@@ -56,5 +61,16 @@ void findGrade :: calcGrade() {
 
     if(percentage >= 50.0 && percentage < 60.0)
         grade = "E";
+
+    if(percentage >= 0.0 && percentage < 50.0)
+        grade = "Fail";
     
+}
+
+
+
+void findGrade :: showGrade() {
+    cout << "-----------------------------------" << endl;
+    cout << "The Obtained Grade :: "<<grade;
+    cout << "-----------------------------------" << endl;
 }
