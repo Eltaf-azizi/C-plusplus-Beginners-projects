@@ -4,7 +4,7 @@ using manespace std;
 
 class temp{
 
-    string phoneNo, name, address, description;
+    string phoneNo, name, address, description, search;
     fstream file;
     public:
     void addContact();
@@ -15,6 +15,7 @@ class temp{
 int main() {
 
     // obj addContact();
+    // obj showAll();
 
     return 0;
 }
@@ -50,6 +51,40 @@ void temp :: showAll(){
         cout<<"Phone Number :: "<<phoneNo<<endl;
         cout<<"Phone Name :: "<<name<<endl;
         cout<<"Phone Address :: "<<address<<endl;
-        cout<<"Phone Description :: "<<description<<endl;
+        cout<<"Phone Description :: "<<description<<endl<<endl;
+
+        getline(file, phoneNo, ',');
+        getline(file, name, ',');
+        getline(file, address, ',');
+        getline(file, description, '\n');
     }
+    file.close();
+}
+
+
+
+void temp :: searchContact(){
+
+    cout<<"Enter Phone Number :: ";
+    getline(cin, search);
+
+    file.open("data.csv", ios :: in);
+
+    getline(file, phoneNo, ',');
+    getline(file, name, ',');
+    getline(file, address, ',');
+    getline(file, description, '\n');
+
+    while(!file.eof()) {
+        cout<<"Phone Number :: "<<phoneNo<<endl;
+        cout<<"Phone Name :: "<<name<<endl;
+        cout<<"Phone Address :: "<<address<<endl;
+        cout<<"Phone Description :: "<<description<<endl<<endl;
+
+        getline(file, phoneNo, ',');
+        getline(file, name, ',');
+        getline(file, address, ',');
+        getline(file, description, '\n');
+    }
+    file.close();
 }
