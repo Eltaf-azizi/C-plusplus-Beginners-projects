@@ -14,8 +14,31 @@ class temp{
 
 int main() {
 
-    // obj addContact();
-    // obj showAll();
+    char choice;
+
+    cout<<"1 --> Add Contact "<<endl;
+    cout<<"2 --> Show All Contact "<<endl;
+    cout<<"3 --> Search Contact "<<endl;
+    cout<<"4 --> Exit "<<endl;
+    cin>>search;
+
+
+    switch(choice){
+        case '1':
+            obj.addContact();
+            break;
+        case '2':
+            obj.showAll();
+            break;
+        case '3':
+            obj.searchContact();
+            break;
+        case '4':
+            return 0;
+            break;
+        default:
+            cout<<"Invalid Selection ...!";
+    }
 
     return 0;
 }
@@ -76,10 +99,13 @@ void temp :: searchContact(){
     getline(file, description, '\n');
 
     while(!file.eof()) {
-        cout<<"Phone Number :: "<<phoneNo<<endl;
-        cout<<"Phone Name :: "<<name<<endl;
-        cout<<"Phone Address :: "<<address<<endl;
-        cout<<"Phone Description :: "<<description<<endl<<endl;
+
+        if(phoneNo == search){
+            cout<<"Phone Number :: "<<phoneNo<<endl;
+            cout<<"Phone Name :: "<<name<<endl;
+            cout<<"Phone Address :: "<<address<<endl;
+            cout<<"Phone Description :: "<<description<<endl<<endl;
+    }
 
         getline(file, phoneNo, ',');
         getline(file, name, ',');
