@@ -10,6 +10,7 @@ bool gameOver;
 const int height = 20;
 const int width = 20;
 int headX, headY, fruitX, fruitY, score;
+int tailx[100], taily[100];
 int tail_len;
 
 
@@ -33,7 +34,8 @@ int main() {
             input();
             logic();
             sleep();
-            system("cls");
+            // system("cls");
+            gameOver = true;
         }
     }
     return 0;
@@ -66,7 +68,36 @@ void draw(){
             if(j==0){
                 cout<<"\t\t||";
             }
+            //snake head
+            if(i == headY && j == headX){
+                cout << "O";
+            }
+            // fruit
+            else if(i == fruitY && j == fruitX) {
+                cout << "*";
+            }
+            //space, snake tail
+            else{
+                bool print = false;
+                //tail
+                for(int k=0; k<tail_len; k++){
+                    if(tailx[k] == j && taily[k] == i) {
+                        cout << "o";
+                        print = true;
+                    }
+                }
+                //space
+                if(!print) {
+                    cout<< "";
+                }
+            }
+            // right border
+            if(j == width-1) {
+                cout << "||";
+            }
         }
+        cout << endl;
+        cout << "\t\t\tScore: " << score << endl;
     }
 
     // Lower Border
