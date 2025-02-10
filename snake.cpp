@@ -130,8 +130,8 @@ void input(){
     default:
         break;
     }
-
 }
+
 
 
 void logic(){
@@ -148,6 +148,30 @@ void logic(){
         taily[i] = prevy;
         prevx = prev2x;
         prevy = prev2y;
-
     }
+
+    // direction logic
+    switch (dir)
+    {
+    case LEFT:
+        headX--;
+        break;
+
+    case RIGHT:
+        headX++;
+        break;
+
+    case UP:
+        headY--;
+        break;
+
+    case DOWN:
+        headY++;
+        break;
+    
+    default:
+        break;
+    }
+
+    
 }
