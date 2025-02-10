@@ -34,8 +34,7 @@ int main() {
             input();
             logic();
             sleep();
-            // system("cls");
-            gameOver = true;
+            system("cls");
         }
     }
     return 0;
@@ -109,6 +108,7 @@ void draw(){
 
 
 void input(){
+    if(_kbhit())
     switch (getch())
     {
     case 'a':
@@ -173,5 +173,34 @@ void logic(){
         break;
     }
 
-    
+    // touch wall
+    if(headX >= width){
+        headX = 0;
+    }
+    else if(headX < 0){
+        headX = width-1;
+    }
+    if(headY >= height){
+        headY = 0;
+    }
+    else if(headY < 0){
+        headY = height-1;
+    }
+
+
+    // snake bite itself
+    for(int i=0; i< tail_len; i++){
+        if(tailx[i] == headX && tailY[i] == headY){
+            gameOver = true;
+        }
+    }
+
+
+    // snake eat fruit
+    if(headX == friutX && headY == fruitY){
+        score += 10;
+        fruitX = rand()%width;
+        fruitY = rand()%height;
+        tail_len++;
+    }
 }
