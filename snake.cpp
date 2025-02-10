@@ -109,10 +109,45 @@ void draw(){
 
 
 void input(){
+    switch (getch())
+    {
+    case 'a':
+        dir = LEFT;
+        break;
+
+    case 'd':
+        dir = RIGHT;
+        break;
+
+    case 'w':
+        dir = UP;
+        break;
+
+    case 's':
+        dir = DOWN;
+        break;
+    
+    default:
+        break;
+    }
 
 }
 
 
 void logic(){
-    
+    // tail logic
+    int prevx = tailx[0];
+    int prevy = taily[0];
+    int prev2x, prev2y;
+    tailx[0] = headX;
+    taily[0] = headY;
+    for(int i=1; i<tail_len; i++){
+        prev2x = tailx[0];
+        prev2y = taily[0];
+        tailx[i] = prevx;
+        taily[i] = prevy;
+        prevx = prev2x;
+        prevy = prev2y;
+
+    }
 }
