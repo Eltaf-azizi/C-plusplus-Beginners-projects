@@ -1,5 +1,15 @@
 #include <iostream>
+#include <string>
+#include <fstream>
 using namespace std;
+
+
+struct todolist {
+    int id;
+    string task;
+};
+
+int ID;
 
 void banner();
 void addTask();
@@ -54,3 +64,34 @@ int main() {
     return 0;
 }
 
+
+void banner(){
+    cout << "_____________________________" << endl;
+    cout << "\t     My Todo" << endl;
+    cout << "_____________________________" << endl;
+}
+
+
+void addTask() {
+    system("cls");
+    banner();
+    todolist todo;
+    cout << "Enter new task: " << endl;
+    cin.get();
+    getline(cin, todo.task);
+    char save;
+    cout << "Save? (y/n): ";
+    cin >> save;
+    if(save == 'y') {
+        ID++;
+        ofstream fout;
+        fout.open("todo.txt");
+        fout << "\n" << ID;
+        fout << "\n" << todo.task;
+        fout.close();
+
+        char more;
+        cout << "Add more task? (y/n): ";
+        cin >> more;
+    }
+}
