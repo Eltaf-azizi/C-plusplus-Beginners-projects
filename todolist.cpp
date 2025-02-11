@@ -2,6 +2,11 @@
 using namespace std;
 
 void banner();
+void addTask();
+void showTask();
+void searchTask();
+void deleteTask();
+void updateTask();
 
 int main() {
     
@@ -18,7 +23,34 @@ int main() {
         int choice;
         cout << "\n\tEnter Choice: ";
         cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            addTask();
+            break;
+
+        case 2:
+            showTask();
+            break;
+
+        case 3:
+            searchTask();
+            break;
+
+        case 4:
+            deleteTask();
+            break;
+
+        case 5:
+            updateTask();
+            break;
+        
+        default:
+            break;
+        }
     }
 
     return 0;
 }
+
