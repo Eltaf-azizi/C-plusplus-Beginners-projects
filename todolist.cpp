@@ -113,4 +113,21 @@ void showTask(){
     banner();
     todoList todo;
     ifstream fin;
+    fin.open("todo.txt");
+    cout << "Task: " << endl;
+
+
+    while(!fin.eof){
+        fin >> todo.id;
+        fin.ignore();
+        getline(fin, todo.task);
+        if(todo.task != ""){
+            cout << "\t" << todo.id << ": " << todo.task << endl;
+        }
+
+        else{
+            cout << "\tEmpty!" << endl;
+        }
+    }
+    fin.close();
 }
