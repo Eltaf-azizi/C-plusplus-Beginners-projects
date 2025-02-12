@@ -93,5 +93,24 @@ void addTask() {
         char more;
         cout << "Add more task? (y/n): ";
         cin >> more;
+
+        if (more == 'y'){
+            addTask();
+        }
+        else{
+            system("cls");
+            cout << "Added Successfully!" endl;
+            return;
+        }
     }
+    system("cls");
+}
+
+
+
+void showTask(){
+    system("cls");
+    banner();
+    todoList todo;
+    ifstream fin;
 }
