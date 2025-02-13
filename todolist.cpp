@@ -147,4 +147,18 @@ void searchTask(){
     cin >> id;
     todolist todo;
     ifstream fin("todo.txt");
+    while(!fin.eof())
+    {
+        fin >> todo.id;
+        fin.ignore();
+        fetline(fin, todo.task);
+        if(todo.id == id){
+            system("cls");
+            cout << "\t" << todo.id << ": " << todo.task << endl;
+            return;
+        }
+    }
+    system("cls");
+    cout << "Not Found!" << endl;
+    return;
 }
