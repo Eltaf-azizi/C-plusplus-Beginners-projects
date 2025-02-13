@@ -85,7 +85,7 @@ void addTask() {
     if(save == 'y') {
         ID++;
         ofstream fout;
-        fout.open("todo.txt");
+        fout.open("todo.txt", ios::app);
         fout << "\n" << ID;
         fout << "\n" << todo.task;
         fout.close();
@@ -130,4 +130,21 @@ void showTask(){
         }
     }
     fin.close();
+    char exit;
+    cout << "Exit? (y/n): ";
+    cin >> exit;
+    if(exit != 'y'){
+        showTask();
+    }
+    system("cls");
+}
+
+void searchTask(){
+    system("cls");
+    banner();
+    int id;
+    cout << "Enter task id: ";
+    cin >> id;
+    todolist todo;
+    ifstream fin("todo.txt");
 }
