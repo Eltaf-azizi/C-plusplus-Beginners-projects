@@ -14,7 +14,7 @@ int ID;
 void banner();
 void addTask();
 void showTask();
-void searchTask();
+int searchTask();
 void deleteTask();
 void updateTask();
 
@@ -139,7 +139,7 @@ void showTask(){
     system("cls");
 }
 
-void searchTask(){
+int searchTask(){
     system("cls");
     banner();
     int id;
@@ -161,4 +161,21 @@ void searchTask(){
     system("cls");
     cout << "Not Found!" << endl;
     return;
+}
+
+
+void deleteTask(){
+    system("cls");
+    int id = searchTask();
+    if(id != 0){
+        char del;
+        cout << "\n\tDelete? (y/n): ";
+        cin >> del;
+        if(del == 'y'){
+            todolist todo;
+            ofstream tempfile;
+            tempFile.open("temp.txt");
+            ifstream;
+        }
+    }
 }
