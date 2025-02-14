@@ -175,7 +175,26 @@ void deleteTask(){
             todolist todo;
             ofstream tempfile;
             tempFile.open("temp.txt");
-            ifstream;
+            ifstream fin;
+            fin.open("todo.txt");
+            int index = 1;
+            while(!fin.eof()) {
+                fin >> todo.id;
+                fin.ignore();
+                getline(fin, todo.task);
+                if(todo.id == id) {
+                    tempFile << "\n" << index;
+                    tempFile << "\n" << todo.task;
+                    index++;
+                    ID--;
+                }
+            }
+            fin.close();
+            tempFile.close();
+            remove("todo.txt");
+            rename("temp.txt", "todo.txt");
+            system("cls");
+            cout << "\n\tDeleted Successfully!" << endl;
         }
     }
 }
