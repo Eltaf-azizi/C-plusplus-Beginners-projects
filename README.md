@@ -13,3 +13,18 @@ This repository contains a variety of beginner-level C++ projects. These project
  - **Build Confidence:** Gain confidence in writing and running C++ programs through hands-on experience. 💪
 
  - **Encourage Exploration:** Explore different aspects of C++ programming, from input/output operations to basic algorithms. 🔍
+
+
+## 🤝 Contributing
+If you have a beginner-friendly C++ project that you'd like to share, feel free to contribute! Please follow these steps:
+
+1. Fork the repository. 🍴
+
+2. Create a new branch for your project. 🌿
+
+3. Add your project in a new directory with a clear and concise README explaining the project. 📄
+
+4. Submit a pull request. 🚀
+
+Your contributions are highly appreciated and will help others in their learning journey! 🌈
+
