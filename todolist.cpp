@@ -173,7 +173,7 @@ void deleteTask(){
         cin >> del;
         if(del == 'y'){
             todolist todo;
-            ofstream tempfile;
+            ofstream tempFile;
             tempFile.open("temp.txt");
             ifstream fin;
             fin.open("todo.txt");
@@ -196,5 +196,15 @@ void deleteTask(){
             system("cls");
             cout << "\n\tDeleted Successfully!" << endl;
         }
+        else{
+            system("cls");
+            cout << "Not Deleted!" << endl;
+        }
     }
+}
+
+
+
+void updateTask(){
+
 }
