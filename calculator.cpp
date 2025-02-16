@@ -20,6 +20,21 @@ int main() {
     cin >> number2;
 
     // if else statement checking entered operation
+    if (operation == "+") {
+        cout << number1 + number2;
+    }
+    else if (operation == "-") {
+        cout << number1 - number2;
+    }
+    else if (operation == "*") {
+        cout << number1 * number2;
+    }
+    else if (operation == "/") {
+        cout << number1 / number2;
+    }
+    else {
+        cout << "Not a Recognized operation!";
+    }
 
     return 0;
 }
