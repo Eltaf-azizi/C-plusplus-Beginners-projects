@@ -2,6 +2,9 @@
 using namespace std;
 
 
+void start_game();
+void end_game();
+
 int main() {
     string user_input;
     cout << "================ Welcome! =================";
@@ -9,6 +12,23 @@ int main() {
 
     cin >> user_input;
 
+    if(user_input == "play") {
+        start_game();
+    }
+    else{
+        end_game();
+    }
 
-    return 0;
+}
+
+
+
+void start_game(){
+
+}
+
+
+
+void end_game(){
+
 }
