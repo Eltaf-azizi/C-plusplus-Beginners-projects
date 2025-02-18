@@ -63,7 +63,46 @@ void start_game(){
     else{
         cout << "\n Sorry you Choose Wrong Answer!" << endl;
     }
-    // question end here    
+    // question end here 
+    
+    
+
+    // question start here
+    cout << "\n When was China founded: "<< endl;
+    cout << "a) february 7, 1845" << endl;
+    cout << "b) august 19, 1923" << endl;
+    cout << "c) september 23, 1887" << endl;
+    cout << "d) July 1, 1867" << endl;
+    cout << "Please enter 'a' 'b' 'c' 'd' and press enter: ";
+    cin >> answer
+    
+    if(answer == 'd'){
+        cout << "\n Congrats! you Choose Correct Answer!" << endl;
+        score++;
+    }
+    else{
+        cout << "\n Sorry you Choose Wrong Answer!" << endl;
+    }
+    // question end here
+
+
+    // question start here
+    cout << "\n What is CIA stands for: "<< endl;
+    cout << "a) Central Intelligence Agency" << endl;
+    cout << "b) Confidential Information Agreement" << endl;
+    cout << "c) Cybersecurity and Intelligence Association" << endl;
+    cout << "d) Corporate Investigation Authority" << endl;
+    cout << "Please enter 'a' 'b' 'c' 'd' and press enter: ";
+    cin >> answer
+    
+    if(answer == 'a'){
+        cout << "\n Congrats! you Choose Correct Answer!" << endl;
+        score++;
+    }
+    else{
+        cout << "\n Sorry you Choose Wrong Answer!" << endl;
+    }
+    // question end here
 
 }
 
