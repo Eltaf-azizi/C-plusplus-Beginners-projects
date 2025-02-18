@@ -25,6 +25,22 @@ int main() {
 
 void start_game(){
 
+    char answer;
+    cout << "\n How much is 3+3 :"<< endl;
+    cout << "a) 4" << endl;
+    cout << "b) 6" << endl;
+    cout << "c) 3" << endl;
+    cout << "d) 0" << endl;
+    cout << "Please enter 'a' 'b' 'c' 'd' and press enter: ";
+    cin >> answer
+
+    if(answer == 'b'){
+        cout << "\n Congrats! you Choose Correct Answer!" << endl;
+    }
+    else{
+        cout << "\n Sorry you Choose Wrong Answer!" << endl;
+    }
+
 }
 
 
