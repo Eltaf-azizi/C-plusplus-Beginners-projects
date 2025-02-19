@@ -3,7 +3,7 @@ using namespace std;
 
 
 void start_game();
-void end_game();
+void end_game(int score);
 
 int main() {
     string user_input;
@@ -16,7 +16,7 @@ int main() {
         start_game();
     }
     else{
-        end_game();
+        end_game(0);
     }
 
 }
@@ -68,7 +68,7 @@ void start_game(){
     
 
     // question start here
-    cout << "\n When was China founded: "<< endl;
+    cout << "\n When was Canada founded: "<< endl;
     cout << "a) february 7, 1845" << endl;
     cout << "b) august 19, 1923" << endl;
     cout << "c) september 23, 1887" << endl;
@@ -87,7 +87,7 @@ void start_game(){
 
 
     // question start here
-    cout << "\n What is CIA stands for: "<< endl;
+    cout << "\n What is CIA stands for: " << endl;
     cout << "a) Central Intelligence Agency" << endl;
     cout << "b) Confidential Information Agreement" << endl;
     cout << "c) Cybersecurity and Intelligence Association" << endl;
@@ -104,10 +104,15 @@ void start_game(){
     }
     // question end here
 
+    end_game(score);
+
 }
 
 
 
-void end_game(){
+void end_game(int score){
+    
+    cout << "\n Thanks for Playing" << endl;
+    cout << "Your score is " << score << endl;
 
 }
