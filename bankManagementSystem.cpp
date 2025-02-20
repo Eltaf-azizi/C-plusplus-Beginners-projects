@@ -2,6 +2,19 @@
 #include <conio.h>
 #include <iostream.h>
 
+class bank
+{
+    public:
+        void open_account();
+        void deposit_money();
+        void withdraw_money();
+        void display_account();
+};
+
+void bank :: open_account()
+{
+    cout << "enter your full name :: ";
+}
 
 int main() 
 {
