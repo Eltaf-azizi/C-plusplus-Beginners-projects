@@ -4,6 +4,8 @@
 
 class bank
 {
+    char name[100], add[100], y[100];
+    int balance;
     public:
         void open_account();
         void deposit_money();
@@ -13,7 +15,23 @@ class bank
 
 void bank :: open_account()
 {
-    cout << "enter your full name :: ";
+    cout << "Enter your full name :: ";
+    cin.ignore();
+    cin.getline(name, 100)
+    cout << "Enter your address ::";
+    cin.ignore();
+    cin.getline(add, 100);
+    cout << "What type of account you want to open saving (s) or current (c)"
+    cin >> y;
+    cout << "Enter amount for deposite :: ";
+    cin >> balance;
+    cout << "Your account is created \n";
+}
+
+
+void deposit :: deposit_money()
+{
+    cout << "Enter how much you deposite :: ";
 }
 
 int main() 
