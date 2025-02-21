@@ -23,7 +23,7 @@ void bank :: open_account()
     cin.getline(add, 100);
     cout << "What type of account you want to open saving (s) or current (c)"
     cin >> y;
-    cout << "Enter amount for deposite :: ";
+    cout << "Enter amount for deposit :: ";
     cin >> balance;
     cout << "Your account is created \n";
 }
@@ -31,7 +31,17 @@ void bank :: open_account()
 
 void deposit :: deposit_money()
 {
-    cout << "Enter how much you deposite :: ";
+    cout << "Enter how much you deposit :: ";
+    cin >> a;
+    balance+=a;
+    cout << "Total amount you deposit :: \t" << balance;
+}
+
+
+void bank :: display_account()
+{
+    cout << "Your full name :: \t" << name;
+    cout << "Your address :: \t " << addr;
 }
 
 int main() 
