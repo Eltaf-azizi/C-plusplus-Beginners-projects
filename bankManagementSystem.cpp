@@ -42,6 +42,21 @@ void bank :: display_account()
 {
     cout << "Your full name :: \t" << name;
     cout << "Your address :: \t " << addr;
+    cout << "type of account that you open :: \t" << y;
+    cout << "amount you deposit :: \t" << balance;
+}
+
+
+
+void bank :: withdraw_money()
+{
+    float amount;
+    cout << "\n withdraw :: ";
+    cout << "Enter amount to withdraw :: ";
+    cin >> amount;
+    balance=balance-amount;
+    cout << "Now total amount is left :: " << balance;
+
 }
 
 int main() 
