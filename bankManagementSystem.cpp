@@ -61,12 +61,35 @@ void bank :: withdraw_money()
 
 int main() 
 {
+    int ch;
+    bank obj;
+    do{
     cout << "1) Open account \n";
     cout << "2) Deposit Money \n";
     cout << "3) Withdraw Money \n";
     cout << "4) Display Account \n";
     cout << "5) Exit";
+    cout << "Select the option from above \n";
+    cin >> ch;
 
+
+    switch(ch)
+    {
+        case 1: << "1) Open account \n";
+        obj.open_account();
+        break;
+
+        case 2: << "2) Deposit Money \n";
+        obj.deposit_money();
+        break;
+
+        case 3: << "3) Withdraw Money : \n";
+        obj.withdraw_money();
+        break;
+
+
+    }
+    }
 
     getch();
     return 0;
