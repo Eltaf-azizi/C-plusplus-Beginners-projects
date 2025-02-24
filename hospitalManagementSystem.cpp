@@ -62,7 +62,36 @@ class rana:public info
     void get()
     {
         system("cls");
-        ofstream out("Rana.txt", ios::app);
+        ofstream out("Rana.txt", ios::app | ios::binary);
+        a1.get();
+        out.write((char*) a1, sizeof(info));
+        out.close();
+        cout << "Your entry has been saved ";
+        getch();
+        menu();
+    }
+
+
+    void show()
+    {
+        ifstream in("rana.txt");
+        if(in==NULL)
+        {
+            cout << "\n\n No data in the file";
+            cout << "\n\n\t\t Press any key to continue";
+            getch();
+            menu();
+        }
+        else{
+            while(!in.eof())
+            {
+                in.read((char*) * a1, sizeof(a1));
+                a1.show();
+            }
+            in.close();
+            getch();
+            menu();
+        }
     }
 }
 
