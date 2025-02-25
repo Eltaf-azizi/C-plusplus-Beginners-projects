@@ -143,7 +143,46 @@ class Jahangir:public info
 
 
 
-class fahad : public Info{
+class Fahad : public Info{
+    public:
+    info a1;
+
+
+    void get()
+    {
+        system("cls");
+        ofstream out("Fahad.txt", ios::app | ios::binary);
+        a1.get();
+        out.write((char*) & a1, sizeof(info));
+        out.close();
+        cout << "Your entry has been saved ";
+        getch();
+        menu();
+    }
+
+
+    void show()
+    {
+        ifstream in("Fahad.txt");
+        if(in==NULL)
+        {
+            cout << "\n\n No data in the file";
+            cout << "\n\n\t\t Press any key to continue";
+            getch();
+            menu();
+        }
+        else{
+            while(!in.eof())
+            {
+                in.read((char*) & a1, sizeof(a1));
+                a1.show();
+            }
+            in.close();
+            cout << "Press any key to continue";
+            getch();
+            menu();
+        }
+    }
 
 };
 
