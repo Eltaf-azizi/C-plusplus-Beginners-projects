@@ -15,15 +15,15 @@ void cpasscode();
 
 class one 
 {
-    public;
+    public:
     virtual void get()=0;
     virtual void show()=0;
-}
+};
 
 
 class inof:public one
 {
-    public;
+    public:
     char name[50], time[50];
     int sum, age;
 
@@ -55,7 +55,7 @@ class inof:public one
 
 class rana:public info
 {
-    public;
+    public:
     info a1;
 
 
@@ -64,7 +64,7 @@ class rana:public info
         system("cls");
         ofstream out("Rana.txt", ios::app | ios::binary);
         a1.get();
-        out.write((char*) a1, sizeof(info));
+        out.write((char*) & a1, sizeof(info));
         out.close();
         cout << "Your entry has been saved ";
         getch();
@@ -85,13 +85,65 @@ class rana:public info
         else{
             while(!in.eof())
             {
-                in.read((char*) * a1, sizeof(a1));
+                in.read((char*) & a1, sizeof(a1));
                 a1.show();
             }
             in.close();
+            cout << "Press any key to continue";
             getch();
             menu();
         }
     }
-}
+};
+
+
+
+class Jahangir:public info
+{
+    public:
+    info a1;
+
+
+    void get()
+    {
+        system("cls");
+        ofstream out("Jahangir.txt", ios::app | ios::binary);
+        a1.get();
+        out.write((char*) & a1, sizeof(info));
+        out.close();
+        cout << "Your entry has been saved ";
+        getch();
+        menu();
+    }
+
+
+    void show()
+    {
+        ifstream in("Jahangir.txt");
+        if(in==NULL)
+        {
+            cout << "\n\n No data in the file";
+            cout << "\n\n\t\t Press any key to continue";
+            getch();
+            menu();
+        }
+        else{
+            while(!in.eof())
+            {
+                in.read((char*) & a1, sizeof(a1));
+                a1.show();
+            }
+            in.close();
+            cout << "Press any key to continue";
+            getch();
+            menu();
+        }
+    }
+};
+
+
+
+class fahad : public Info{
+
+};
 
