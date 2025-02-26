@@ -186,3 +186,26 @@ class Fahad : public Info{
 
 };
 
+
+
+class information
+{
+    system("cls");
+    system("color F3");
+    cout << "\n=============================================================================================";
+    cout << "\n\n\t\t(Three Doctor Available) \n\n \t\t[Information and timing are given below]\n";
+    cout << "---------------------------------------------------------------------------------------------";
+    cout << "\t\tDr. Rana (skin specialist)\n\n";
+    cout << "\t\t\t [[Timing]]:\n\n";
+    cout << "\tMonday to Friday\t\t9AM to 5PM\n";
+    cout << "\tSaturday        \t\t9AM to 1PM\n";
+    cout << "\tSunday          \t\tOff\n";
+    cout << "---------------------------------------------------------------------------------------------";
+    cout << "\t\tDr. Jahangir (Dentist)\n\n";
+    cout << "\t\t\t [[Timing]]:\n\n";
+    cout << "\tMonday to Friday\t\t9AM to 5PM\n";
+    cout << "\tSaturday        \t\t9AM to 1PM\n";
+    cout << "\tSunday          \t\tOff\n";
+    cout << "---------------------------------------------------------------------------------------------";
+}
+
