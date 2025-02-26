@@ -230,5 +230,32 @@ void call_dr()
     int choice;
     cout << "\n\n\n\t\tPress 1 for Dr. Rana \n\n\t\t Press 2 for Dr. Jahangir \n\n\t\t Press 3 for Dr. Fahad\n\n";
     cin>>choice;
+
+    one *ptr;
+    rana s3;
+    Jahangir s4;
+    Fahad s5;
+
+    if(choice == 1)
+    {
+        ptr = & s3;
+        ptr->get();
+    }
+
+    else if(choice == 2)
+    {
+        ptr = & s4;
+        ptr->get();
+    }
+
+    else if(choice== 4)
+    {
+        ptr = & s5;
+        ptr->get();
+    }
+
+    else{
+        cout << "Sorry invalid choice :";
+    }
 }
 
