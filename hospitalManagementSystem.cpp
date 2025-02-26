@@ -190,22 +190,45 @@ class Fahad : public Info{
 
 class information
 {
+    public:
+
+    void drinfo()
+    {
+        system("cls");
+        system("color F3");
+        cout << "\n=============================================================================================";
+        cout << "\n\n\t\t(Three Doctor Available) \n\n \t\t[Information and timing are given below]\n";
+        cout << "---------------------------------------------------------------------------------------------";
+        cout << "\t\tDr. Rana (skin specialist)\n\n";
+        cout << "\t\t\t [[Timing]]:\n\n";
+        cout << "\tMonday to Friday\t\t9AM to 5PM\n";
+        cout << "\tSaturday        \t\t9AM to 1PM\n";
+        cout << "\tSunday          \t\tOff\n";
+        cout << "---------------------------------------------------------------------------------------------";
+        cout << "\t\tDr. Jahangir (Dentist)\n\n";
+        cout << "\t\t\t [[Timing]]:\n\n";
+        cout << "\tMonday to Friday\t\t9AM to 5PM\n";
+        cout << "\tSaturday        \t\t9AM to 1PM\n";
+        cout << "\tSunday          \t\tOff\n";
+        cout << "---------------------------------------------------------------------------------------------";
+        cout << "\t\tDr. Fahad (Eye Specialist)\n\n";
+        cout << "\t\t\t [[Timing]]:\n\n";
+        cout << "\tMonday to Friday\t\t9AM to 5PM\n";
+        cout << "\tSaturday        \t\t9AM to 1PM\n";
+        cout << "\tSunday          \t\tOff\n";
+        cout << "---------------------------------------------------------------------------------------------";
+        cout << "\nPress any key to continue";
+        getch();
+        menu();
+    }
+    
+};
+
+void call_dr()
+{
     system("cls");
-    system("color F3");
-    cout << "\n=============================================================================================";
-    cout << "\n\n\t\t(Three Doctor Available) \n\n \t\t[Information and timing are given below]\n";
-    cout << "---------------------------------------------------------------------------------------------";
-    cout << "\t\tDr. Rana (skin specialist)\n\n";
-    cout << "\t\t\t [[Timing]]:\n\n";
-    cout << "\tMonday to Friday\t\t9AM to 5PM\n";
-    cout << "\tSaturday        \t\t9AM to 1PM\n";
-    cout << "\tSunday          \t\tOff\n";
-    cout << "---------------------------------------------------------------------------------------------";
-    cout << "\t\tDr. Jahangir (Dentist)\n\n";
-    cout << "\t\t\t [[Timing]]:\n\n";
-    cout << "\tMonday to Friday\t\t9AM to 5PM\n";
-    cout << "\tSaturday        \t\t9AM to 1PM\n";
-    cout << "\tSunday          \t\tOff\n";
-    cout << "---------------------------------------------------------------------------------------------";
+    int choice;
+    cout << "\n\n\n\t\tPress 1 for Dr. Rana \n\n\t\t Press 2 for Dr. Jahangir \n\n\t\t Press 3 for Dr. Fahad\n\n";
+    cin>>choice;
 }
 
