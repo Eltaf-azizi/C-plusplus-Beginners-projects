@@ -281,7 +281,59 @@ void menu()
     cout << "\n\n\t1-\t\t Press 1 for available doctor information \n\n";
     cout << "\t2-\t\t Press 2 for doctor appointment \n\n";
     cout << "\t3-\t\t Press 3 for saving staff information menu:\n\n ";
-    
+    cout << "\t4-\t\t Press 4 for checking patient appiontment menu: \n\n";
+    cout << "\t5-\t\t Press 5 for checking staff information menu: \n\n";
+    cout << "\t6-\t\t Press 5 for change password or create password : \n\n";
+    cout << "\t7-\t\t [   Press 7 for logout  ] \n";
+
+    cout << "\n=======================================================================================\n";
+    cout << "\n\n\t\t Please enter your choice : ";
+    information a1;
+    one *ptr;
+    staff a2;
+    int a;
+    cin>>a;
+
+    if(a==1)
+    {
+        a1.drinfo();
+    }
+
+    else if(a==2)
+    {
+        call_dr();
+    }
+
+    else if(a==3)
+    {
+        ptr=&a2;
+        ptr->get();
+    }
+
+    else if(a==4)
+    {
+        pinfoshow();
+    }
+
+    else if(a==5)
+    {
+        ptr=&a2;
+        ptr->show();
+    }
+
+    else if(a==6)
+    {
+        cpasscode();
+    }
+
+    else if(a==7)
+    {
+        passcode();
+    }
+
+    else{
+        cout << "Sorry invalid choice : ";
+    }
 }
 
 
