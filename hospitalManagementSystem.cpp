@@ -256,6 +256,32 @@ void call_dr()
 
     else{
         cout << "Sorry invalid choice :";
+        getch();
+        menu();
     }
+};
+
+
+
+void menu()
+{
+    system("cls");
+    system("color FC");
+
+    cout << "\n";
+    cout << "\n";
+
+    cout << "\t\t   |   ++++++++  MAIN MENU  ++++++++  |  \n";
+    cout << "\t\t   |     Hopital Management System    |  \n";
+    cout << "\t\t   |==================================|  \n";
+
+    cout << "\n---------------------------------------------------------------------------------------\n";
+    cout << "\t\t     Please Select Any Option    \n";
+
+    cout << "\n\n\t1-\t\t Press 1 for available doctor information \n\n";
+    cout << "\t2-\t\t Press 2 for doctor appointment \n\n";
+    cout << "\t3-\t\t Press 3 for saving staff information menu:\n\n ";
+    
 }
+
 
