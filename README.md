@@ -38,3 +38,6 @@ If you have a beginner-friendly C++ project that you'd like to share, feel free 
 
 Your contributions are highly appreciated and will help others in their learning journey! 🌈
 
+<br>
+
+**<p align="center">Happy Coding!</p>**
