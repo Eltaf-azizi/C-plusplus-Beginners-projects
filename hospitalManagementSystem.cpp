@@ -188,6 +188,52 @@ class Fahad : public Info{
 
 
 
+class staf : public one
+{
+    public:
+    char all[999];
+    char name[50], age[20], sal[30], pos[20];
+
+
+    void get()
+    {
+        system("cls");
+        {
+            cin.sync();
+            cout << "\n Enter the staff name =";
+            cin.getline(name, 50);
+            cout << "\n Enter the staff age =";
+            cin.getline(age, 20);
+            cout << "\n Enter the staff salary =";
+            cin.getline(sal, 30);
+            cout << "\n Enter the staff position =";
+            cin.getline(pos, 20);
+        }
+
+        cout << "\nName = " << name << "\nAge = " << age << "\nSalary = " << sal << "\nPosition = " << pos;
+        cout.close();
+        cout << "\n\n Your information has been saved :\n\t\t\t Press any key to continue ";
+        getch();
+        menu();
+    }
+
+
+
+    void show()
+    {
+        ifstream in("staff.txt");
+        if(!in)
+        {
+            cout << "File open error";
+        }
+    }
+    
+    
+
+}
+
+
+
 class information
 {
     public:
