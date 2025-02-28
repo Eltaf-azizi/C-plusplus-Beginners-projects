@@ -390,6 +390,35 @@ void menu()
 
 
 
+void passcode()
+{
+    system("cls");
+    char p1[50], p2[50], p3[50];
+
+    system("color Fc");
+
+    ifstream in("password.txt");
+    {
+        cin.sync();
+
+        cout << "\n\n\n\n\t\t\t Enter the password : ";
+        cin.getline(p1, 50);
+        in.getline(p2, 50);
+        if(strcmp(p2, p1)==0)
+        {
+            menu();
+        }
+        else
+        {
+            cout << "\n\n\n\n\t\t\t Incorrect passcode please try again\n";
+            sleep(999);
+            passcode();
+        }
+    }
+    in.close();
+};
+
+
 void cpasscode()
 {
     system("cls");
