@@ -390,16 +390,27 @@ void menu()
 
 
 
-void passcode()
+void cpasscode()
 {
     system("cls");
-    char p1[50], p2[50], p3[50];
-
-
-    system("color Fc");
-
-    ifstream in("password.txt");
+    ofstream out ("password.txt");
     {
         cin.sync();
+        cout << "\n\n\n\n\t\t\t Enter the new password ";
+        cin.getline(n, 50);
+        out<<n;
     }
+    
+    out.close();
+    cout << "\n\n\n\n\t\t\t Your password has been saved : ";
+    getch();
+    menu();
+}
+
+
+
+int main()
+{
+    passcode();
+    system("pause");
 }
