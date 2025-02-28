@@ -226,11 +226,17 @@ class staf : public one
         {
             cout << "File open error";
         }
+        while(!(in.eof()))
+        {
+            in.getline(all, 999);
+            cout << all << endl;
+        }
+        in.close();
+        cout << "\n\n\t\t\t Press any key to continue : ";
+        getch();
+        menu();
     }
-    
-    
-
-}
+};
 
 
 
@@ -380,6 +386,20 @@ void menu()
     else{
         cout << "Sorry invalid choice : ";
     }
+};
+
+
+
+void passcode()
+{
+    system("cls");
+    char p1[50], p2[50], p3[50];
+
+
+    system("color Fc");
+
+    ifstream in("password.txt");
+    {
+        cin.sync();
+    }
 }
-
-
