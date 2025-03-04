@@ -57,6 +57,31 @@ int main()
 
         system("cls");
 
+        switch(choice)
+        {
+            case '1':
+            {
+                while(1)
+                {
+                    system("cls");
+                    cout << "\t\t\t STUDENT INFORMATION AND BIO DATA SECTION \n\n\n";
+                    cout << "Enter your choice: "<<endl;
+                    cout << "1. Create new entry\n";
+                    cout << "2. Find and display entry\n";
+                    cout << "3. Jump to main\n";
+                    cin >> choice;
+
+                    switch(choice)
+                    {
+                        case '1':
+                        {
+                            
+                        }
+                    }
+                }
+            }
+        }
+
 
     }
 
