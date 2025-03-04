@@ -75,7 +75,21 @@ int main()
                     {
                         case '1':
                         {
-                            
+                            ofstream f1("student.txt", ios::app);
+                            for(i=0, choice!='n'; i++)
+                            {
+                                if((choice=='y') || (choice=='Y') || (choice=='1'))
+                                {
+                                    cout << "Enter first name: ";
+                                    cin>>studentData.fname;
+                                    cout << "Enter last name: ";
+                                    cin>>studentData.lname;
+                                    cout << "Enter Registration number: ";
+                                    cin>>studentData.registration;
+                                    cout << "Enter class: ";
+                                    cin>>studentData.classes;
+                                }
+                            }
                         }
                     }
                 }
