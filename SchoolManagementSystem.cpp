@@ -88,8 +88,28 @@ int main()
                                     cin>>studentData.registration;
                                     cout << "Enter class: ";
                                     cin>>studentData.classes;
+
+
+                                    f1<<studentData.fname<<endl<<studentData.lname<<endl<<studentData.registration<<endl<<studentData.classes<<endl;
+                                    cout << "Do you want to enter data: ";
+                                    cout << "Press Y to continue and N to finish: ";
+                                    cin >> choice;
                                 }
                             }
+                            f1.close();
+                        }
+                        continue;
+
+
+                        case '2':
+                        ifstream f2("student.txt");
+                        cout << "Enter first name to be displayed: ";
+                        cin >> find;
+                        cout<<endl;
+                        int notFound = 0;
+                        for(j=0;(j<1)||(!f2.eof()); j++)
+                        {
+                            getline(f2,studentData.fname);
                         }
                     }
                 }
