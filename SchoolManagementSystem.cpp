@@ -187,10 +187,34 @@ int main()
                                 cout << "Enter pay: ";
                                 cin >> tech[i].pay;
                                 cout << "Enter  Phone number: ";
-                                
+                                cin >> tech[i].cel_no;
+                                cout << "Enter blood group";
+                                cin >> tech[i].blod_grp;
+
+
+                                t1<<tech[i].fst_name<< endl <<tech[i].lst_name<<endl
+                                <<tech[i].qualification<<ednl<<tech[i].exp<<endl
+                                <<tech[i].server<<ednl<<tech[i].subj<<ednl<<tech[i].lec
+                                <<ednl<<tech[i].pay<<endl<<tech[i],cel_no<<endl<<tech[i].blod_grp<<endl;
+
+                                cout << "Do you want to enter data: ";
+                                cin >> choice;
                             }
                         }
+
+                        system("cls");
+
+                        t1.close();
                     }
+                }
+                continue;
+
+                case '2':
+                {
+                    ifstream t2("teacher.txt");
+
+                    cout << "Enter name to be displayed: ";
+                    cin >> find;
                 }
             }
         }
