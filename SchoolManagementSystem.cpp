@@ -110,6 +110,25 @@ int main()
                         for(j=0;(j<1)||(!f2.eof()); j++)
                         {
                             getline(f2,studentData.fname);
+
+                            
+                            if(studentData.fname==find)
+                            {
+                                notFound = 1;
+                                cout << "First Name: " <<studentData.fname<<endl;
+                                cout << "Last Name: " <<studentData.lname<<endl;
+
+                                getline(f2, studentData.registration);
+                                cout << "Registration Number: " << studentData.registration << endl;
+                                getline(f2, studentData.classes);
+                                cout << "Class: " << studentData.classes << endl <<endl;
+                            }
+                        }
+
+                        if(notFound == 0)
+                        {
+                            cout << "No Record Found" << endl;
+                            
                         }
                     }
                 }
