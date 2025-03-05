@@ -166,7 +166,30 @@ int main()
                     {
                         ofstream f1("teacher.txt", ios::app);
 
-                        
+                        for(i=0;choice!='n' && choice!='N'; i++)
+                        {
+                            if((choice=='y') || (choice=='Y') || (choice=='1'))
+                            {
+                                cout << "Enter First Name: ";
+                                cin >> tech[i].fst_name;
+                                cout << "Enter Last Name: ";
+                                cin >> tech[i].lst_name;
+                                cout << "Enter Qualification: ";
+                                cin >> tech[i].qualification; 
+                                cout << "Enter Experience(year): ";
+                                cin >> tech[i].exp;
+                                cout << "Enter number of year in this school: ";
+                                cin >> tech[i].serves;
+                                cout << "Enter subject who teaches: ";
+                                cin >> tech[i].subj;
+                                cout << "Enter lecture(per week): ";
+                                cin >> tech[i].lec;
+                                cout << "Enter pay: ";
+                                cin >> tech[i].pay;
+                                cout << "Enter  Phone number: ";
+                                
+                            }
+                        }
                     }
                 }
             }
