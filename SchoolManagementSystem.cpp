@@ -128,8 +128,45 @@ int main()
                         if(notFound == 0)
                         {
                             cout << "No Record Found" << endl;
-                            
                         }
+
+                        f2.close();
+                        cout << "Press any key times to proceed";
+                        getch();
+                        getch();
+                    }
+                    continue;
+
+                    case '3':
+                    {
+                        break;
+                    }
+                }
+                break;
+            }
+            continue;
+        }
+
+        case '2':
+        {
+            while(1)
+            {
+                system("cls");
+                cout << "\t\t\t TEACHERS INFORMATION AND BIO DATA SECTION \n\n\n";
+                cout << "Enter your choice: " << endl;
+                cout << "1. Create new entry\n";
+                cout << "2. Find and display\n";
+                cout << "3. Jump to main\n";
+                cin >> choice;
+
+
+                switch(choice)
+                {
+                    case '1':
+                    {
+                        ofstream f1("teacher.txt", ios::app);
+
+                        
                     }
                 }
             }
