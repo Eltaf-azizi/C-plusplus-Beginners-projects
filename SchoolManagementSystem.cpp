@@ -215,6 +215,32 @@ int main()
 
                     cout << "Enter name to be displayed: ";
                     cin >> find;
+
+                    cout << endl;
+                    int notFound = 0;
+                    for(j=0;((j<i) || (!t2.eof()));j++)
+                    {
+                        getline(t2,tech[j].fst_name);
+
+                        if(tech[j].fst_name==find)
+                        {
+                            notFound = 1;
+                            cout << "First name: "<<tech[j].fst_name << endl;
+                            getline(t2, tech[j].lst_name);
+                            cout << "Last name: " << tech[j].lst_name << endl;
+                            getline(t2, tech[j].qualification);
+                            cout << "Qualification: " <<tech[j].qualification << endl;
+                            getline(t2, tech[j].exp);
+                            cout << "Experience: " << tech[j].exp << endl;
+
+                            getline(t2, tech[j].serves);
+                            cout << "Number of year in this school: " << tech[j].serves<<endl;
+
+                            getline(t2, tech[j].serves);
+                            cout << "Subject who teaches: " << tech[j].subj << endl;
+                            
+                        }
+                    }
                 }
             }
         }
