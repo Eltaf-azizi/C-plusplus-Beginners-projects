@@ -239,9 +239,33 @@ int main()
                             getline(t2, tech[j].serves);
                             cout << "Subject who teaches: " << tech[j].subj << endl;
                             
+                            getline(t2, tech[j].lec);
+                            cout << "Enter lecture(per week): " << tech.[j].lec << endl;
+                            getline(t2,tech[j].pay);
+                            cout << "pay: "<<tech[j].pay<<endl;
+
+                            getline(t2, tech[j].addrs);
+                            cout << "Enter your Address: " << tech[j].addrs << endl;
+
+                            getline(t2, tech[j].cell_no);
+                            cout << "Enter your phone number: " << tech[j].cell_no << endl;
+
+                            getline(t2, tech[j].blod_grp);
+                            cout << "Enter your blood group: " << tech[j].blod_grp << endl;
                         }
                     }
+                    t2.close();
+                    if(notFound = 0)
+                    {
+                        cout << "No record found" << endl;
+                    }
+                    cout << "Press any key two times to proceed";
+                    getch();
+                    getch();
                 }
+                continue;
+
+                
             }
         }
 
