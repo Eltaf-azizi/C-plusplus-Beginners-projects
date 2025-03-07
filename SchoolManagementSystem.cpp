@@ -265,13 +265,13 @@ int main()
                 }
                 continue;
 
-                
+                case '3':
+                {
+                    break;
+                }
             }
+            break;
         }
-
-
     }
-
-
     return 0;
 }
