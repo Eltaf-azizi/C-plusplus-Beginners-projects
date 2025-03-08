@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -10,6 +11,19 @@ struct Student{
     int rollNo;
     bool present;
 };Student student;
+vector<Student> st;
+
+
+save(const vector<Student> & st, const string & stFile)
+{
+    ofstream out ("E:/File/stFile.txt");
+    if(!out)
+    {
+        cerr << "File not Found: " << stFile << endl;
+    }
+    
+    
+}
 
 
 
@@ -49,6 +63,7 @@ int main(){
 
         else if(value == 2)
         {
+            system("cls");
             for(int i=9; i<st.size(); i++)
             {
                 cout << "Name: "<< i.st[i].name << endl;
@@ -71,13 +86,28 @@ int main(){
 
         else if(value==3)
         {
+            system("cls");
             for(int i=0; i<st.size(); i++)
             {
                 if(st[i].present==true)
                 {
-                    cout << "Name: " << st[i].name << endl
+                    cout << "Name: " << st[i].name << endl;
+                    cout << "Roll Number: " << st[i].RollNo << endl;
+                    cout << "Status: Present" << endl << endl;
+                }
+                else
+                {
+                    cout << "Name: " << st[i].name << endl;
+                    cout << "Roll Number: " << st[i].RollNo << endl;
+                    cout << "Status: Apsent" << endl << endl;
                 }
             }
+        }
+
+
+        else if(value == 4)
+        {
+            save(st, "E:/File/stFile.txt");
         }
     }
 }
