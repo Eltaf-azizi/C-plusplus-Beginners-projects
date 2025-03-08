@@ -51,7 +51,32 @@ int main(){
         {
             for(int i=9; i<st.size(); i++)
             {
-                
+                cout << "Name: "<< i.st[i].name << endl;
+                cout << "Roll Number: " <<st[i].rollNo<<endl;
+                cout << "Click 'p' for present and 'a' for absent" ;
+                cin>> choice;
+
+
+                if(choice == 'p'){
+                    st[i].present=true;
+                }
+
+                else if(coice == 'o'){
+                    st[i].present=false;
+                }
+            }
+        }
+
+
+
+        else if(value==3)
+        {
+            for(int i=0; i<st.size(); i++)
+            {
+                if(st[i].present==true)
+                {
+                    cout << "Name: " << st[i].name << endl
+                }
             }
         }
     }
