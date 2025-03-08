@@ -21,7 +21,16 @@ save(const vector<Student> & st, const string & stFile)
     {
         cerr << "File not Found: " << stFile << endl;
     }
-    
+
+
+    for(int i=0; i<st.size(); i++)
+    {
+        cout << "Name: " << st.size[i].name << endl;
+        cout << "Roll Number: " << st[i].rollNo << endl;
+        cout << "Status: " << st[i].present << endl << endl;
+    }
+    cout.close();
+    cout << "Saved to file " << stFile << endl;
     
 }
 
@@ -92,13 +101,13 @@ int main(){
                 if(st[i].present==true)
                 {
                     cout << "Name: " << st[i].name << endl;
-                    cout << "Roll Number: " << st[i].RollNo << endl;
+                    cout << "Roll Number: " << st[i].rollNo << endl;
                     cout << "Status: Present" << endl << endl;
                 }
                 else
                 {
                     cout << "Name: " << st[i].name << endl;
-                    cout << "Roll Number: " << st[i].RollNo << endl;
+                    cout << "Roll Number: " << st[i].rollNo << endl;
                     cout << "Status: Apsent" << endl << endl;
                 }
             }
@@ -108,6 +117,18 @@ int main(){
         else if(value == 4)
         {
             save(st, "E:/File/stFile.txt");
+        }
+
+
+        else if(value==0)
+        {
+            exit(0);
+        }
+
+
+        else{
+            system("cls");
+            cout << "Invalid Input" << endl;
         }
     }
 }
