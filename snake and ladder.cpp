@@ -6,6 +6,19 @@ using namespace std;
 
 
 
+int random(int min, int max)
+{
+    bool isFirst = true;
+
+    if(isFirst)
+    {
+        srand(static_cast <unsigned int> (time(0)));
+    }
+    return min+rand() % (max-min + 1);
+}
+
+
+
 int main()
 {
 
@@ -28,7 +41,9 @@ int main()
 
         for(iint =0; i<maxPlayer; i++)
         {
-
+            cout << "Player " << i+1 << "is at the position" << current[i]<<endl;
         }
+
+        cout << "=========================" endl;
     }
 }
