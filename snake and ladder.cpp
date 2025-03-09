@@ -18,6 +18,12 @@ int random(int min, int max)
 }
 
 
+int dice()
+{
+    return random(1, 6);
+}
+
+
 
 int main()
 {
@@ -45,5 +51,13 @@ int main()
         }
 
         cout << "=========================" endl;
+
+        cout << "Player " << player+1 << "rolled a "<< dice();
+        current[player] += dice();
+        
+        if(current[player] >= board)
+        {
+            cout << "Player " << player+1 << "wins" << endl << endl;
+        }
     }
 }
