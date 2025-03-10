@@ -40,6 +40,7 @@ int main()
 
     while(!gameOver)
     {
+        system("cls");
         cout << "Snake and Ladder game!";
         cout << "Current Player " player+1 << endl;
         cout << "=========================" << endl;
@@ -52,12 +53,13 @@ int main()
 
         cout << "=========================" endl;
 
-        cout << "Player " << player+1 << "rolled a "<< dice();
+        cout << "Player " << player+1 << "rolled a "<< dice() <<endl;
         current[player] += dice();
         
         if(current[player] >= board)
         {
             cout << "Player " << player+1 << "wins" << endl << endl;
+            gameOver = true;
         }
 
 
@@ -76,8 +78,14 @@ int main()
         {
             if (current[player] == snake[i])
             {
-                c
+                cout << "Player " << player+1 << " is bitten by snake " <<dice()<<endl;
+                current[player] -= dice();
+                current[player] -= dice();
             }
         }
-    }
+
+        player = (player+1) % maxPlayer;
+
+        system("pause");
+    } 
 }
