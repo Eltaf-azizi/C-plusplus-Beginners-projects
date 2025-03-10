@@ -59,5 +59,25 @@ int main()
         {
             cout << "Player " << player+1 << "wins" << endl << endl;
         }
+
+
+        for(int i=0; i<sizeof(ladder) / sizeof(ladder[0]); i++)
+        {
+            if (current[player] == ladder[i])
+            {
+                cout << "Player " << player+1 << " climbed a ladder " <<dice()<<endl;
+                current[player] += dice();
+            }
+        }
+
+
+
+        for(int i=0; i<sizeof(snake) / sizeof(snake[0]); i++)
+        {
+            if (current[player] == snake[i])
+            {
+                c
+            }
+        }
     }
 }
