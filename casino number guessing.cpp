@@ -46,6 +46,29 @@ int main()
         }
         while(bettingAmount > amount);
 
+        do
+        {
+            cout << "Guess your number to bet between 1 to 10: ";
+            cin >> guess;
+
+            if(guess <= 0 || guess > 10)
+            {
+                cout << "\nNumber should be between 1 to 10\n"
+                     << "Re-enter data\n";
+        }
+        while(guess <= 0 || guess > 10);
+        dice = rand() % 10 + 1;
+
+        if(dice == guess)
+        {
+            cout << "\n\n Congratulations! You have won $ " << bettingAmount * 10;
+            amount = amount + bettingAmount * 10;
+        }
+        else
+        {
+            cout << "Sorry you lost $ " << bettingAmount << "\n";
+            amount = amount - bettingAmount;
+        }
     }
     while(choice == 'Y' || choice == 'y');
 }
