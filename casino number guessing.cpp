@@ -29,6 +29,22 @@ int main()
 
     do
     {
+        system("cls");
+        rules();
+        cout << "\n\n Your current balance is $ " << amount << "\n";
+
+        do
+        {
+            cout << playerName << ", Enter money to bet : $";
+            cin >> bettingAmount;
+
+            if(bettingAmount > amount)
+            {
+                cout << "Your betting amount is more than your current balance\n";
+                cout << "\nRe-enter data\n ";
+            }
+        }
+        while(bettingAmount > amount);
 
     }
     while(choice == 'Y' || choice == 'y');
