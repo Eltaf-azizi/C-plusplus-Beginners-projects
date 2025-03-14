@@ -29,7 +29,64 @@ int main()
 
     do
     {
+        system("cls");
+        rules();
+        cout << "\n\n Your current balance is $ " << amount << "\n";
 
+        do
+        {
+            cout << playerName << ", Enter money to bet : $";
+            cin >> bettingAmount;
+
+            if(bettingAmount > amount)
+            {
+                cout << "Your betting amount is more than your current balance\n";
+                cout << "\nRe-enter data\n ";
+            }
+        }
+        while(bettingAmount > amount);
+
+        do
+        {
+            cout << "Guess your number to bet between 1 to 10: ";
+            cin >> guess;
+
+            if(guess <= 0 || guess > 10)
+            {
+                cout << "\nNumber should be between 1 to 10\n"
+                     << "Re-enter data\n";
+        }
+        while(guess <= 0 || guess > 10);
+        dice = rand() % 10 + 1;
+
+        if(dice == guess)
+        {
+            cout << "\n\n Congratulations! You have won $ " << bettingAmount * 10;
+            amount = amount + bettingAmount * 10;
+        }
+        else
+        {
+            cout << "Sorry you lost $ " << bettingAmount << "\n";
+            amount = amount - bettingAmount;
+        }
+
+        cout << "\n The winning number was: " <<dice << "\n";
+        cout << "\n" << playerName << ", You have $ " << amount << "\n";
+
+        if(amount == 0)
+        {
+            cout << "Your Do not have money to play.." <<;
+            break;
+        }
+        else
+        {
+            cout << "Do you want to play again (y/n)?";
+            cin >> choice;
+        }
     }
     while(choice == 'Y' || choice == 'y');
 }
+cout << "\n\n\n";
+drawline(70, '=');
+cout << "Thanks for playing the game. your current balance is $: " << amount;
+drawline(70, '=');
