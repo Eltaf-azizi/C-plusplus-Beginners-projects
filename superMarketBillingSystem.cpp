@@ -46,3 +46,35 @@ class Bill
         return Quantity;
     }
 };
+
+
+
+addItem(Bill b)
+{
+    bool close = false;
+
+    while(!close)
+    {
+        
+    }
+}
+
+
+int main()
+{
+    Bill b;
+    bool exit = false;
+
+    while(!exit)
+    {
+        system("cls");
+        int val;
+        cout << "\t Welcome to the Super Market Billing System" << endl;
+        cout << "\t ******************************************" << endl;
+        cout << "\t\t 1. Add Item." << endl;
+        cout << "\t\t 2. Print bill." << endl;
+        cout << "\t\t 3. Exit." << endl;
+        cout << "\t\t Enter Choice: ";
+        cin >> val;
+    }
+}
