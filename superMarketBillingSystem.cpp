@@ -61,8 +61,11 @@ addItem(Bill b)
         cout << "\t Enter choice: " << endl;
         cin >> choice;
 
+
+
         if(choice == 1)
         {
+            system("cls");
             string item;
             int rate, quant;
 
@@ -79,6 +82,27 @@ addItem(Bill b)
             b.setQuant(quant);
 
             ofstream out("D:/Bill.txt", ios :: app);
+
+
+            if(!out)
+            {
+                cout << "\t ERROR: File Can't Open!" << endl;
+            }
+            else
+            {
+                out << "\t" << b.getItem() << " : " << b.getRate() << " : " << b.getQuant() <<endl<<endl;
+            }
+            out.close();
+            cout << "\t Item Added Successfuly!" << endl;
+            Sleep(5000);
+        }
+
+        else if(choice == 3)
+        {
+            system("cls");
+            close = true;
+            cout << "\t Back to Main Menu!" << end;
+            Sleep(5000);
         }
     }
 }
