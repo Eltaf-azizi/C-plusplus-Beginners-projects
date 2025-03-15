@@ -55,7 +55,31 @@ addItem(Bill b)
 
     while(!close)
     {
-        
+        int choice;
+        cout << "\t 1. Add" << endl;
+        cout << "\t 2. Close" << endl;
+        cout << "\t Enter choice: " << endl;
+        cin >> choice;
+
+        if(choice == 1)
+        {
+            string item;
+            int rate, quant;
+
+            cout << "\t Enter the Item Name: ";
+            cin >> item;
+            b.setItem(item);
+
+            cout << "\t Enter the Rate of Item: ";
+            cin >> rate;
+            b.setRate(rate);
+
+            cout << "\t Enter the Quantity of Item: ";
+            cin >> quant;
+            b.setQuant(quant);
+
+            ofstream out("D:/Bill.txt", ios :: app);
+        }
     }
 }
 
