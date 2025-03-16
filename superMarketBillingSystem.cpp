@@ -162,12 +162,45 @@ printBill(Bill b)
                         int newQuant = itemQuant - quant;
                         itemQuant = newQuant;
                         count += amount;
+
+                        cout << "\t" <<itemNmae<<" : "<<itemRate<< " : "<<itemQuant<<endl<<endl;
+                    }
+
+                    else
+                    {
+                        cout << "\t Sorry, "<<item<<" Ended!"<<endl;
                     }
                 }
+
+
+                else
+                {
+                    out << line <<;
+                }
             }
+
+
+            if(!found)
+            {
+                cout << "\t Item Not Available!" <<endl;
+            }
+
+            out.close();
+            in.close();
+            remove("D:/Bill.txt");
+            rename("D:/Bill Temp.txt", "D:/Bill.txt");
         }
+
+
+        else if(choice == 2)
+        {
+            close = true;
+            cout << "\t Counting Total Bill"<<endl;
+        }
+        Sleep(5000);
     }
 }
+
 
 
 int main()
