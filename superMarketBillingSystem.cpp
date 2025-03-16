@@ -122,6 +122,29 @@ printBill(Bill b)
         cout << "\t 2. Close Session." <<endl;
         cout << "\t Enter Choice: ";
         cin >> choice;
+
+
+        if(choice == 1)
+        {
+            string item;
+            int quant;
+            cout << "\t Enter Item: ";
+            cin >> item;
+            cout << "\t Enter the Quantity: ";
+            cin >> quant;
+
+            ifstream in("D:/Bill.txt");
+            ofstream out("D:/Bill Temp.txt");
+
+            string line;
+            bool found = false;
+
+            while(getline(in, line))
+            {
+                stringstream ss;
+                ss << line;
+            }
+        }
     }
 }
 
