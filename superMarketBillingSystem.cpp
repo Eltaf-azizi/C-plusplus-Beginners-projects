@@ -143,6 +143,27 @@ printBill(Bill b)
             {
                 stringstream ss;
                 ss << line;
+
+                string itemName;
+                int itemRate, itemQuant;
+                char delimiter;
+                ss >> itemName >> delimiter >> itemRate >> delimiter >> itemQuant;
+
+
+                if(item == itemName)
+                {
+                    found = true;
+
+                    if(quant == itemQuant)
+                    {
+                        int amount = itemRate * quant;
+                        cout << "\t Item | Rate | Quantity | Amount" << endl;
+                        cout << "\t"<<itemName<<"\t"<<itemRate<<"\t"<<itemQuant<<"\t"<<amount<<endl;
+                        int newQuant = itemQuant - quant;
+                        itemQuant = newQuant;
+                        count += amount;
+                    }
+                }
             }
         }
     }
