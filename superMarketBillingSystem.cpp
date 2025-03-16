@@ -108,6 +108,24 @@ addItem(Bill b)
 }
 
 
+printBill(Bill b)
+{
+    system("cls");
+    int count = 0;
+    bool close = false;
+    while(!close)
+    {
+        system("cls");
+        int choice;
+
+        cout << "\t 1. Add Bill." <<endl;
+        cout << "\t 2. Close Session." <<endl;
+        cout << "\t Enter Choice: ";
+        cin >> choice;
+    }
+}
+
+
 int main()
 {
     Bill b;
@@ -124,5 +142,18 @@ int main()
         cout << "\t\t 3. Exit." << endl;
         cout << "\t\t Enter Choice: ";
         cin >> val;
+
+        if(val == 1)
+        {
+            system("cls");
+            addItem(b);
+            Sleep(5000);
+        }
+
+
+        else if(val == 2)
+        {
+
+        }
     }
 }
