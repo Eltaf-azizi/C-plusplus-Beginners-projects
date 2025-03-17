@@ -42,5 +42,26 @@ class Hostel
 
 class Student
 {
-    
-}
+    private:
+    string Name, RollNo, Address;
+    public:
+    student():Name(""), RollNo(""), Address("") { }
+
+
+    setName(string name)
+    {
+        Name = name;
+    }
+
+
+    setRollNo(string rollNo)
+    {
+        RollNo = rollNo;
+    }
+
+
+    setAddress(string address)
+    {
+        Address = address;
+    }
+};
