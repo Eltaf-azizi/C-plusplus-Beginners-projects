@@ -90,4 +90,26 @@ int main()
 {
     Hostel h("3Star", 5000, 2);
     Student s;
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        int val;
+        cout << "\t Welcome To Hostel Accommodation System" <<endl;
+        cout << "\t **************************************" <<endl;
+        cout << "\t 1. Reserve a Bed." <<endl;
+        cout << "\t 2. Exit." <<endl;
+        cout << "\t Enter Choice: ";
+        cin >>val;
+
+
+        if(val==1)
+        {
+            system("cls");
+            string name, rollNo, address;
+            cout << "\t Enter Name of Student: ";
+            cin >> name;
+        }
+    }
 }
