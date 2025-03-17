@@ -37,6 +37,29 @@ class Hostel
     {
         return Bed;
     }
+
+
+    reserve()
+    {
+        ifstream in("D:/Hostel.txt");
+        ofstream out ("D:/Hostel Temp.txt");
+
+
+        string line;
+        while(getline(in, line))
+        {
+            int pos = line.find("3star");
+
+            if(pos != string::npos)
+            {
+                int bed = Bed-1;
+                Bed = bed;
+
+                stringstream ss;
+                ss<<bed;
+            }
+        }
+    }
 };
 
 
