@@ -89,6 +89,10 @@ class Student
 int main()
 {
     Hostel h("3Star", 5000, 2);
+    ofstream out("D:/Hostel.txt");
+    out << "\t" <<h.getName()<<" : " << h.getRent()<< " : " << h.getBed() <<endl <<endl;
+    cout << "Hostel Data Saved" <<endl;
+    out.close();
     Student s;
 
     bool exit = false;
@@ -110,6 +114,21 @@ int main()
             string name, rollNo, address;
             cout << "\t Enter Name of Student: ";
             cin >> name;
+            s.setName(name);
+
+
+            cout << "\t Enter RollNo of Student: ";
+            cin >> rollNo;
+            s.setRollNo(rollNo);
+
+
+            cout << "\t Enter Address of Student: ";
+            cin >> address;
+            s.setAddress(address);
+
+
+            ofstream outFile("D:/Student.txt", ios::app);
+            outFile<<"\t" << s.getName()<<" : " <<s.getRollNo()<< " : " <<s.getAddress() <<endl<<endl;
         }
     }
 }
