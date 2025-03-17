@@ -108,7 +108,7 @@ addItem(Bill b)
 }
 
 
-printBill(Bill b)
+printBill()
 {
     system("cls");
     int count = 0;
@@ -163,7 +163,7 @@ printBill(Bill b)
                         itemQuant = newQuant;
                         count += amount;
 
-                        cout << "\t" <<itemNmae<<" : "<<itemRate<< " : "<<itemQuant<<endl<<endl;
+                        cout << "\t" <<itemName<<" : "<<itemRate<< " : "<<itemQuant<<endl<<endl;
                     }
 
                     else
@@ -199,6 +199,11 @@ printBill(Bill b)
         }
         Sleep(5000);
     }
+    system("cls");
+    cout <<endl<<endl;
+    cout << "\t Total Bill ------------------ : " <<count<<endl<<endl;
+    cout << "\t Thanks for Shopping!"<<endl;
+    Sleep(5000);
 }
 
 
@@ -230,7 +235,16 @@ int main()
 
         else if(val == 2)
         {
+            printBill();
+        }
 
+
+        else if(val == 3)
+        {
+            system("cls");
+            exit = true;
+            cout << "\t Good Luck!"<<endl;
+            Sleep(5000);
         }
     }
 }
