@@ -64,4 +64,30 @@ class Student
     {
         Address = address;
     }
+
+
+
+    string getName()
+    {
+        return Name;
+    }
+
+
+    string getRollNo()
+    {
+        return RollNo;
+    }
+
+
+    string getAddress()
+    {
+        return Address;
+    }
 };
+
+
+int main()
+{
+    Hostel h("3Star", 5000, 2);
+    Student s;
+}
