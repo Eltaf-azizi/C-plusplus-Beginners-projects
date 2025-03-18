@@ -43,6 +43,16 @@ class Airline
 };
 
 
+display()
+{
+    ifstream in("D:/Flight.txt");
+
+    if(!in)
+    {
+        cout << "Error: File Can't Open!" <<endl;
+    }
+}
+
 
 int main()
 {
@@ -58,18 +68,31 @@ int main()
     }
     else
     {
-        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        out << "\t " << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
         flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
 
 
-        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        out << "\t " << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
         flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
 
 
-        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        out << "\t " << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
         flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
 
         cout << "Data Saved Successfuly!" <<endl;
- 
+        out.close();
+    }
+
+
+    bool exit = false;
+
+    while(!exit)
+    {
+        system("cls");
+        cout << "\t Welcome To Airline Management System" <<endl;
+        cout << "\t ************************************" <<endl;
+        cout << "\t 1. Reserve a Seat." <<endl;
+        cout << "\t 2. Exit." <<endl;
+        cout << "\t Enter Your Choice: ";
     }
 }
