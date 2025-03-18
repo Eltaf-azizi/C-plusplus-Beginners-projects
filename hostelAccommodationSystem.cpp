@@ -57,8 +57,18 @@ class Hostel
 
                 stringstream ss;
                 ss<<bed;
+                string strBed = ss.str();
+
+                int bedPos = line.find_last_of(':');
+                line.replace(bedPos+1, string::npos, strBed);
             }
+            out << line << endl;
         }
+        out.close();
+        in.close();
+        remove("D:/Hostel.txt");
+        rename("D:/Hostel Temp.txt", "D:/Hostel.txt");
+        cout << "\tBed Reserved Successfuly!" <<endl;
     }
 };
 
@@ -148,6 +158,17 @@ int main()
             cout << "\t Enter Address of Student: ";
             cin >> address;
             s.setAddress(address);
+
+            if(h.getBed() > 0)
+            {
+                h.reverse();
+            }
+
+
+            else if(h.getBed() == 0)
+            {
+                cout << "\t Sorry, No Bed Available!" <<endl;
+            }
 
 
             ofstream outFile("D:/Student.txt", ios::app);
