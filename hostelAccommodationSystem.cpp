@@ -173,6 +173,17 @@ int main()
 
             ofstream outFile("D:/Student.txt", ios::app);
             outFile<<"\t" << s.getName()<<" : " <<s.getRollNo()<< " : " <<s.getAddress() <<endl<<endl;
+            Sleep(5000);
+        }
+
+
+
+        else if(val == 2)
+        {
+            system("cls");
+            exit = true;
+            cout << "Good Luck!" <<endl;
+            Sleep(5000);
         }
     }
 }
