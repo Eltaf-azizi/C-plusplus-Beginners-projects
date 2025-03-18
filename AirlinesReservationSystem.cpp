@@ -51,6 +51,15 @@ display()
     {
         cout << "Error: File Can't Open!" <<endl;
     }
+    else
+    {
+        string line;
+
+        while(getline(in, line))
+        {
+            cout << line <<endl;
+        }
+    }
 }
 
 
@@ -94,5 +103,17 @@ int main()
         cout << "\t 1. Reserve a Seat." <<endl;
         cout << "\t 2. Exit." <<endl;
         cout << "\t Enter Your Choice: ";
+
+        int val;
+        cin>>val;
+
+        if(val == 1)
+        {
+            system("cls");
+            display();
+            string flight;
+            cout << "Enter Flight No: ";
+            cin >> flight; 
+        }
     }
 }
