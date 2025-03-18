@@ -41,3 +41,35 @@ class Airline
         return Seats;
     }
 };
+
+
+
+int main()
+{
+    Airline flight1("F101", "UAE", "England", 50);
+    Airline flight2("F202", "UAE", "USA", 40);
+    Airline flight3("F303", "UAE", "Canada", 2);
+
+    ofstream out("D:/Flight.txt");
+
+    if(!out)
+    {
+        cout << "Error: File can't open!" <<endl;
+    }
+    else
+    {
+        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
+
+
+        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
+
+
+        out << flight1.getFlight()<<" : " << flight1.getDes() << " : " <<
+        flight1.getDep()() << " : " << " : " << flight1.getSeats() <<endl << endl;
+
+        cout << "Data Saved Successfuly!" <<endl;
+ 
+    }
+}
