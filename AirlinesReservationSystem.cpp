@@ -40,6 +40,25 @@ class Airline
     {
         return Seats;
     }
+
+
+
+    update(string flight)
+    {
+        ifstream in("D:/Flight.txt");
+        ofstream out("D:/Flight Temp.txt");
+
+        string line;
+        while(getline(in, line))
+        {
+            int pos = line.find(flight);
+
+            if(pos != string::npos)
+            {
+                
+            }
+        }
+    }
 };
 
 
@@ -114,6 +133,11 @@ int main()
             string flight;
             cout << "Enter Flight No: ";
             cin >> flight; 
+
+            if(flight == flight1.getFlight() && flight1.getSeat() > 0)
+            {
+
+            }
         }
     }
 }
