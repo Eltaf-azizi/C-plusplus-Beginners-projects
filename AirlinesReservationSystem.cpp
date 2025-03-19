@@ -165,7 +165,32 @@ int main()
             }
 
 
+            else if (flight2.getFlight() && flight2.getSeat() > 0)
+            {
+                cout << "Sorry, Seats Not Available" <<endl;
+            }
 
+
+            if(flight == flight3.getFlight() && flight3.getSeat() > 0)
+            {
+                flight3.update(flight);
+            }
+
+
+            else if (flight3.getFlight() && flight3.getSeat() > 0)
+            {
+                cout << "Sorry, Seats Not Available" <<endl;
+            }
+            Sleep(5000);
+        }
+
+
+        else if(val == 2)
+        {
+            system("cls");
+            exit = true;
+            cout << "Good Luck!" <<endl;
+            Sleep(5000);
         }
     }
 }
