@@ -55,9 +55,22 @@ class Airline
 
             if(pos != string::npos)
             {
-                
+                int current = Seats-1;
+                Seats = current;
+                stringstream ss;
+                ss << current;
+                string strCurrent = ss.str();
+
+                int seatPos = line.find_last_of(':');
+                line.replace(seatPos + 2, string::npos, strCurrent);
             }
+            out << line <<endl;
         }
+        out.close();
+        in.close();
+        remove("D:/Flight.txt");
+        rename("D:/Flight Temp.txt", "D:/Flight.txt");
+        cout << "Seats Reserved Successfuly!" <<endl;
     }
 };
 
@@ -136,8 +149,23 @@ int main()
 
             if(flight == flight1.getFlight() && flight1.getSeat() > 0)
             {
-
+                flight1.update(flight);
             }
+
+
+            else if (flight1.getFlight() && flight1.getSeat() > 0)
+            {
+                cout << "Sorry, Seats Not Available" <<endl;
+            }
+
+
+            if(flight == flight2.getFlight() && flight2.getSeat() > 0)
+            {
+                flight2.update(flight);
+            }
+
+
+
         }
     }
 }
