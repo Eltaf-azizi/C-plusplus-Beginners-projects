@@ -42,4 +42,35 @@ class University
     {
         return RollNo;
     }
+
+
+    string getName()
+    {
+        return Name;
+    }
+
+
+    string getSubject()
+    {
+        return Subject;
+    }
+
+
+    string getAddress()
+    {
+        return Address;
+    }
 };
+
+
+
+int main()
+{
+    University student;
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+    }
+}
