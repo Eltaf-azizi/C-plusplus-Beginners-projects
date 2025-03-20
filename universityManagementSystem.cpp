@@ -12,5 +12,34 @@ class University
 
     public:
     University():RollNo(""), Name(""), Subject(""), Address(""){}
-    
-}
+
+
+    setRollNo(string rollNo)
+    {
+        RollNo = rollno;
+    }
+
+
+    setName(string name)
+    {
+        Name = name;
+    }
+
+
+    setSubject(string subject)
+    {
+        Subject = subject;
+    }
+
+
+    setAddress(string address)
+    {
+        Address = address;
+    }
+
+
+    string getRollNo()
+    {
+        return RollNo;
+    }
+};
