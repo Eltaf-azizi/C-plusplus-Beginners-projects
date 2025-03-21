@@ -16,7 +16,7 @@ class University
 
     setRollNo(string rollNo)
     {
-        RollNo = rollno;
+        RollNo = rollNo;
     }
 
 
@@ -65,7 +65,32 @@ class University
 
 add(University student)
 {
+    string rollNo, name, subject, address;
+
     
+    cout << "Enter RollNo of the Student: ";
+    cin >> rollNo;
+    student.setRollNo(rollNo);
+
+
+    cout << "\t Enter RollNo Of Student: ";
+    cin >> rollNo;
+    student.setRollNo(rollNo);
+
+
+    cout << "\t Enter Name of Student: ";
+    cin >> name;
+    student.setName(name);
+
+
+    cout << "\t Enter Subject of student: ";
+    cin >> subject;
+    student.setSubject(subject);
+
+
+    cout << "\t Enter Address of Student: ";
+    cin >> address;
+    student.setAddress(address);
 }
 
 
