@@ -91,6 +91,21 @@ add(University student)
     cout << "\t Enter Address of Student: ";
     cin >> address;
     student.setAddress(address);
+
+    ifstream out("D:/university.txt", ios::app);
+
+
+    if(!out)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        out << "\t" << student.getRollNo() << " : "<<student.getName() << " : " <<student.getSubject()
+        <<" : "<<student.getAddress() <<endl <<endl;
+    }
+    out.close();
+    cout << "\t Student Added Successfuly!" <<endl;
 }
 
 
@@ -117,6 +132,7 @@ int main()
         if(val == 1)
         {
             system("cls");
+            add(student);
             Sleep(6000);
         }
     }
