@@ -124,6 +124,22 @@ search()
 
     string line;
     bool found = false;
+
+    while(getline(in, line))
+    {
+        int data = line.find(rollNo);
+
+        if(data != string::npos)
+        {
+            cout << "\t" <<line<<endl;
+            found = true;
+        }
+        else
+        {
+            cout << "\t Student Not Found!" <<endl;
+        }
+    }
+    in.close();
 }
 
 
@@ -153,6 +169,14 @@ int main()
             system("cls");
             add(student);
             Sleep(6000);
+        }
+
+
+        else if(val == 2)
+        {
+            system("cls");
+            search();
+            Sleep(5000);
         }
     }
 }
