@@ -143,6 +143,21 @@ search()
 }
 
 
+update(University student)
+{
+    string rollNo;
+    cout << "\t Enter RollNo of Student: ";
+    cin>>rollNo;
+
+    ifstream infile("D:/university.txt");
+    ofstream outfile("D:/university temp.txt");
+    if(!in || !out)
+    {
+        cout << "Error: File Can't Open!" <<endl;
+    }
+
+}
+
 
 int main()
 {
@@ -176,6 +191,13 @@ int main()
         {
             system("cls");
             search();
+            Sleep(5000);
+        }
+
+
+        else if(val == 3)
+        {
+            system("cls");
             Sleep(5000);
         }
     }
