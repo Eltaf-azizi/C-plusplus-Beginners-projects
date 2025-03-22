@@ -92,7 +92,7 @@ add(University student)
     cin >> address;
     student.setAddress(address);
 
-    ifstream out("D:/university.txt", ios::app);
+    ofstream out("D:/university.txt", ios::app);
 
 
     if(!out)
@@ -107,6 +107,25 @@ add(University student)
     out.close();
     cout << "\t Student Added Successfuly!" <<endl;
 }
+
+
+
+search()
+{
+    string rollNo;
+    cout << "\t Enter RollNo of Student: ";
+    cin>>rollNo;
+
+    ifstream in("D:/university.txt");
+    if(!in)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+
+    string line;
+    bool found = false;
+}
+
 
 
 int main()
