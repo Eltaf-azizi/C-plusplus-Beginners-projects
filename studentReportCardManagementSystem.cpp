@@ -49,3 +49,23 @@ class Student
         return Grade;
     }
 };
+
+
+
+int main()
+{
+    Student s;
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        int val;
+        cout << "\t Welcome to the Student Report Card System" <<endl;
+        cout << "\t *****************************************" <<endl;
+        cout << "\t 1. Report Card" <<endl;
+        cout << "\t 2. Exit" <<endl;
+        cout << "\t Enter Choice: ";
+        cin >> val;
+    }
+}
