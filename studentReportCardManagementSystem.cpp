@@ -67,5 +67,21 @@ int main()
         cout << "\t 2. Exit" <<endl;
         cout << "\t Enter Choice: ";
         cin >> val;
+
+
+
+        if(val == 1)
+        {
+            system("cls");
+            strng rollNo, name;
+            cout << "\t Enter RollNo of Student: ";
+            cin >> rollNo;
+            s.setRollNo(rollNo);
+
+            
+            cout << "\t Enter Name of Student: ";
+            cin >> name;
+            s.setName(name);
+        }
     }
 }
