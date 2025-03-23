@@ -151,7 +151,7 @@ update(University student)
 
     ifstream infile("D:/university.txt");
     ofstream outfile("D:/university temp.txt");
-    if(!in || !out)
+    if(!infile || !outfile)
     {
         cout << "Error: File Can't Open!" <<endl;
     }
@@ -164,14 +164,30 @@ update(University student)
         int pos = line.find(rollNo);
         
         if(pos != string :: npos)
-        string address;
-        cout << "\t Enter New Address: ";
-        cin >> address;
-        student.setAddress(address);
+        {
+            string address;
+            cout << "\t Enter New Address: ";
+            cin >> address;
+            student.setAddress(address);
 
-        int newPos = line.find_last_of(':');
-        line.replace(newPos + 2);
+            int newPos = line.find_last_of(':');
+            line.replace(newPos + 2, string::npos, student.getAddress());
+        }
+        outfile<<line<<endl;
+        found = true;
     }
+    if(!found)
+    {
+        cout << "\t Enter Not Found!" <<endl;
+    }
+
+    outfile.close();
+    infile.close();
+    remove("D:/university.txt");
+    rename("D:/university temp.txt", "D:/university.txt");
+    cout << "\t Data Updated" <<endl;
+
+    
 }
 
 
@@ -214,7 +230,17 @@ int main()
         else if(val == 3)
         {
             system("cls");
+            update(student);
             Sleep(5000);
+        }
+
+
+        else if(val == 4)
+        {
+            system("cls");
+            exit = true;
+            cout << "\t Good Luck" <<endl;
+            Sleep(3000);
         }
     }
 }
