@@ -156,6 +156,22 @@ update(University student)
         cout << "Error: File Can't Open!" <<endl;
     }
 
+
+    string line;
+    bool found = false;
+    while(getline(infile, line))
+    {
+        int pos = line.find(rollNo);
+        
+        if(pos != string :: npos)
+        string address;
+        cout << "\t Enter New Address: ";
+        cin >> address;
+        student.setAddress(address);
+
+        int newPos = line.find_last_of(':');
+        line.replace(newPos + 2);
+    }
 }
 
 
