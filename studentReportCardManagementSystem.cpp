@@ -82,6 +82,26 @@ int main()
             cout << "\t Enter Name of Student: ";
             cin >> name;
             s.setName(name);
+
+
+            int physics, computer, math, total, avg;
+            cout << "\t Enter Marks of Physics: ";
+            cin >> physics;
+
+
+            cout << "\t Enter Marks of Computer: ";
+            cin >> computer;
+
+
+            cout << "\t Enter Marks of Math: ";
+            cin >> math;
+
+
+            system("cls");
+            cout << "\t Student Report Card" <<endl;
+            cout << "\t *******************" <<endl;
+            total = physics + computer + math;
+            cout << "Total Marks Obtained: " << total <<endl;
         }
     }
 }
