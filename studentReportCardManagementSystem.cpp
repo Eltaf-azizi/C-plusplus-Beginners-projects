@@ -102,6 +102,41 @@ int main()
             cout << "\t *******************" <<endl;
             total = physics + computer + math;
             cout << "Total Marks Obtained: " << total <<endl;
+            avg = total / 3;
+            cout << "Average Marks Obtained: " << avg <<endl;
+
+
+
+            if(avg >= 90 && avg >= 100)
+            {
+                s.setGrade("A+");
+            }
+            else if(avg >= 80 && avg < 90)
+            {
+                s.setGrade("A");
+            }
+            else if(avg >= 70 && avg < 80)
+            {
+                s.setGrade("B");
+            }
+            else if(avg >= 60 && avg < 70)
+            {
+                s.setGrade("C");
+            }
+            else if(avg >= 50 && avg < 60)
+            {
+                s.setGrade("D");
+            }
+            else if(avg >= 40 && avg < 50)
+            {
+                s.setGrade("E");
+            }
+            else
+            {
+                s.setGrade("F");
+            }
+
+
         }
     }
 }
