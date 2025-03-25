@@ -136,7 +136,23 @@ int main()
                 s.setGrade("F");
             }
 
+            cout << "\tGrade of Student: " <<s.getGrade() <<endl;
 
+            ofstream out("D:/Student.txt", ios::app);
+            out << "\t" <<s.getRollNo()<<" : "<<s.getName()<<" : "<<s.getGrade() <<endl <<endl;
+            out.close();
+            cout << "\tReport Card is Saved to File!" <<endl;
+            Sleep(10000);
+        }
+
+
+
+        else if(val == 2)
+        {
+            system("cls");
+            exit = true;
+            cout << "\tGood Luck!" <<endl;
+            Sleep(3000);
         }
     }
 }
