@@ -35,4 +35,33 @@ class Account
     }
 
 
-}
+    string getAccountNo()
+    {
+        return AccountNo;
+    }
+
+
+    string getPassword()
+    {
+        return Password;
+    }
+
+
+    int getBalance()
+    {
+        return Balance;
+    }
+};
+
+
+
+
+int main()
+{
+    Account user;
+
+    while()
+    {
+        
+    }
+} 
