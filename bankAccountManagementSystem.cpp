@@ -69,7 +69,23 @@ openAccount(Account user)
     cout << "\t Enter a Strong Password: ";
     cin >> pw;
     user.setPassword(pw);
+
+    user.setBalance(0);
+
+    ofstream outfile("D:/Account.txt", ios::app);
+
+    if(!outfile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        outfile<<"\t" << user.getAccountNo() << " : " <<user.getPassword << " : "
+        << user.getBalance <<endl <<endl;
+        cout << "\t Account Created Successfuly!" <<endl;
+    }
     
+    outfile.close();
     Sleep(5000);
 }
 
