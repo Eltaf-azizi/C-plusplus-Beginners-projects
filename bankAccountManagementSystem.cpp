@@ -116,6 +116,22 @@ addCash()
         int userBalance;
         char delimiter;
         ss >> userID >> delimiter >> userPW >> delimiter >> userBalance;
+
+        if(id == userID)
+        {
+            found = true;
+            int cash;
+            cout << "\t Enter Cash: ";
+            cin >> cash;
+
+            int newBalance = userBalance + cash;
+            userBalance = newBalance;
+            outfile << "\t" << userID <<" : "<<userPW << " : "<<userBalance<<endl;
+        }
+        else
+        {
+            outfile <<line <<endl;
+        }
     }
     Sleep(5000);
 }
