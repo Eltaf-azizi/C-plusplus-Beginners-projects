@@ -60,8 +60,20 @@ int main()
 {
     Account user;
 
-    while()
+    bool exit = false;
+    while(!exit)
     {
+        system("cls");
+        int val;
+        cout << "\t Welcome to Bank Management System" <<endl;
+        cout << "\t *********************************" <<endl;
+        cout << "\t 1. Open New Account." <<endl;
+        cout << "\t 2. Add Cash." <<endl;
+        cout << "\t 3. Withdraw Cash." <<endl;
+        cout << "\t 4. Exit." <<endl;
+        cout << "\t Enter your Choice: ";
+        cin >> val;
+        Sleep(5000);
         
     }
 } 
