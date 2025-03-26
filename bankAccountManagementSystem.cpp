@@ -80,14 +80,25 @@ openAccount(Account user)
     }
     else
     {
-        outfile<<"\t" << user.getAccountNo() << " : " <<user.getPassword << " : "
-        << user.getBalance <<endl <<endl;
+        outfile<<"\t" << user.getAccountNo() << " : " <<user.getPassword() << " : "
+        << user.getBalance() <<endl <<endl;
         cout << "\t Account Created Successfuly!" <<endl;
     }
     
     outfile.close();
     Sleep(5000);
 }
+
+
+addCash()
+{
+    system("cls");
+    string id;
+    cout << "\t Enter Account Number: ";
+    cin >> id;
+
+}
+
 
 
 
@@ -108,6 +119,19 @@ int main()
         cout << "\t 4. Exit." <<endl;
         cout << "\t Enter your Choice: ";
         cin >> val;
+
+
+
+        if(val == 1)
+        {
+            openAccount(user);
+        }
+
+
+        else if(val == 2)
+        {
+
+        }
         Sleep(5000);
         
     }
