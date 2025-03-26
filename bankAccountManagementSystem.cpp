@@ -97,6 +97,27 @@ addCash()
     cout << "\t Enter Account Number: ";
     cin >> id;
 
+    ifstream infile("D:/Account.txt");
+    ofstream outfile("D:/Account Temp.txt");
+    if(!infile || !outfile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+
+    string line;
+    bool found = false;
+
+
+    while(getline(infil, line))
+    {
+        stringstream ss;
+        ss<<line;
+        string userID, userPW;
+        int userBalance;
+        char delimiter;
+        ss >> userID >> delimiter >> userPW >> delimiter >> userBalance;
+    }
+    Sleep(5000);
 }
 
 
