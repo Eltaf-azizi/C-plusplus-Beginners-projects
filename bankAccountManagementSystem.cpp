@@ -55,6 +55,25 @@ class Account
 
 
 
+openAccount(Account user)
+{
+    system("cls");
+    string id, pw;
+
+    cout << "\t Enter Account Number: ";
+    cin >> id;
+    user.setAccountNo(id);
+    
+
+
+    cout << "\t Enter a Strong Password: ";
+    cin >> pw;
+    user.setPassword(pw);
+    
+    Sleep(5000);
+}
+
+
 
 int main()
 {
