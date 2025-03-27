@@ -149,6 +149,27 @@ addCash()
 
 
 
+withdraw()
+{
+    string id, pw;
+    cout << "\t Enter Account Number: ";
+    cin >> id;
+
+
+    cout << "\t Enter Password: ";
+    cin >> pw;
+
+    ifstream infile("D:/Account.txt");
+    ofstream outfile("D:/Account Temp.txt");
+
+    if(!infile || !outfile)
+    {
+        cout << "\t Error: File Can't Open!" << endl;
+    }
+}
+
+
+
 
 int main()
 {
