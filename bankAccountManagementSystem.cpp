@@ -182,6 +182,25 @@ withdraw()
 
         ss >> userID >> delimiter >> userPW >> delimiter >> userBalance;
 
+
+        if(id == userID && pw == userPW)
+        {
+            found = true;
+            int cash;
+            cout << "\t Enter Cash: ";
+            cin >> cash;
+
+            if(cash <= userBalance)
+            {
+                int newBalance = userBalance - cash;
+                userBalance = newBalance;
+                outfile << "\t" << userID << " : " << userPW << " : " << userBalance << endl;
+            }
+            else
+            {
+
+            }
+        }
     }
 }
 
