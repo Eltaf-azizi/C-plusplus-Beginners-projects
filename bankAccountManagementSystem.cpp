@@ -166,6 +166,23 @@ withdraw()
     {
         cout << "\t Error: File Can't Open!" << endl;
     }
+
+
+    string line;
+    bool found = false;
+
+    while(getline(infile, line))
+    {
+        stringstream ss;
+        ss << line;
+        string userID, userPW;
+        int userBalance;
+        char delimiter;
+
+
+        ss >> userID >> delimiter >> userPW >> delimiter >> userBalance;
+
+    }
 }
 
 
