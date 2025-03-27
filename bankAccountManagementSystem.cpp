@@ -195,13 +195,31 @@ withdraw()
                 int newBalance = userBalance - cash;
                 userBalance = newBalance;
                 outfile << "\t" << userID << " : " << userPW << " : " << userBalance << endl;
+                cout << "\t Transaction Was Successful!" << endl;
+                cout << "\t Remaining Balance: " << userBalance << endl;
             }
             else
             {
-
+                cout << "\t Low Balance!";
+                outfile << "\t" << userID << " : " << userPW << " : " << userBalance << endl;
             }
         }
+        else
+        {
+            outfile << line << endl;
+        }
     }
+
+    if(!found)
+    {
+        cout << "\t Invalid Account Number or Password!" << endl;
+    }
+
+    outfile.close();
+    infile.close();
+    remove("D:/Account.txt");
+    rename("D:/Account Temp.txt", "D:/Account.txt");
+    Sleep(5000);
 }
 
 
@@ -241,7 +259,7 @@ int main()
 
         else if(val == 3)
         {
-            
+            withdraw();
         }
         Sleep(5000);
         
