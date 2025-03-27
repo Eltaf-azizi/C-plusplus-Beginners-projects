@@ -261,6 +261,15 @@ int main()
         {
             withdraw();
         }
+
+
+        else if(val == 4)
+        {
+            system("cls");
+            exit = true;
+            cout << "\t Good Luck!" << endl;
+            Sleep(3000);
+        }
         Sleep(5000);
         
     }
