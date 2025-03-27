@@ -127,12 +127,23 @@ addCash()
             int newBalance = userBalance + cash;
             userBalance = newBalance;
             outfile << "\t" << userID <<" : "<<userPW << " : "<<userBalance<<endl;
+            cout << "\t New Balance is: " << userBalance << endl;
         }
         else
         {
             outfile <<line <<endl;
         }
     }
+
+    if(!found)
+    {
+        cout << "\t Enter Valid Account Number!" << endl;
+    }
+
+    outfile.close();
+    infile.close();
+    remove("D:/Account.txt");
+    rename("D:/Account Temp.txt", "D:/Account.txt");
     Sleep(5000);
 }
 
@@ -167,7 +178,13 @@ int main()
 
         else if(val == 2)
         {
+            addCash();
+        }
 
+
+        else if(val == 3)
+        {
+            
         }
         Sleep(5000);
         
