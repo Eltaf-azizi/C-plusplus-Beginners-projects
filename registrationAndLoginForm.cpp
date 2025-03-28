@@ -44,4 +44,19 @@ class Login
 int main()
 {
     Login log;
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        int val;
+        cout << "\t Welcome to Registration and Login Form" <<endl;
+        cout << "\t **************************************" <<endl;
+        cout << "\t 1. Register" <<endl;
+        cout << "\t 2. Login" <<endl;
+        cout << "\t 3. Exit" <<endl;
+        cout << "\t Enter your Choice: ";
+        cin >> val;
+        Sleep(4000);
+    }
 }
