@@ -20,10 +20,28 @@ class Login
     {
         LoginID = id;
     }
-}
+
+
+    void setPW(string pw)
+    {
+        Password = pw;
+    }
+
+
+    string getID()
+    {
+        return LoginID;
+    }
+
+
+    string getPW()
+    {
+        return Password;
+    }
+};
 
 
 int main()
 {
-    
+    Login log;
 }
