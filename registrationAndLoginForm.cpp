@@ -41,6 +41,23 @@ class Login
 };
 
 
+
+registration(Login log)
+{
+    system("cls");
+    string id, pw;
+    cout << "\t Enter Login ID: ";
+    cin >> id;
+    log.setID(id);
+
+    cout << "\t Enter a Strong Password: ";
+    cin >> pw;
+    log.setPW(pw);
+
+    Sleep(3000);
+}
+
+
 int main()
 {
     Login log;
@@ -58,5 +75,12 @@ int main()
         cout << "\t Enter your Choice: ";
         cin >> val;
         Sleep(4000);
+
+
+
+        if(val == 1)
+        {
+            
+        }
     }
 }
