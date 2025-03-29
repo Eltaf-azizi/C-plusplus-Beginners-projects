@@ -50,9 +50,29 @@ registration(Login log)
     cin >> id;
     log.setID(id);
 
+    start:
     cout << "\t Enter a Strong Password: ";
     cin >> pw;
-    log.setPW(pw);
+    if(pw.length() >= 8)
+    {
+        log.setPW(pw);
+    }
+    else
+    {
+        cout << "\t Enter Minimum 8 characters" <<endl;
+        goto start;
+    }
+
+    ofstream outfile("D:/Login.txt", ios::app);
+
+    if(!outfile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        
+    }
 
     Sleep(3000);
 }
