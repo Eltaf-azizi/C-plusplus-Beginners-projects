@@ -118,13 +118,21 @@ login()
                 cout << "\t Please Wait";
                 for(int i=0; i<3; i++)
                 {
-
+                    cout << ".";
+                    Sleep(800);
                 }
+                system("cls");
 
                 cout << "\t Welcome to This Page!" <<endl;
             }
         }
+
+        if(!found)
+        {
+            cout << "\t Error: Incorrect Login ID or Password!" <<endl;
+        }
     }
+    infile.close();
     Sleep(5000);
 }
 
@@ -156,10 +164,20 @@ int main()
         }
 
 
-
         else if(val == 2)
         {
-
+            login();
         }
+
+
+        else if(val == 3)
+        {
+            system("cls");
+            exit = true;
+            cout << "\t Good Luck!" <<endl;
+            Sleep(3000);
+        }
+
+        Sleep(3000);
     }
 }
