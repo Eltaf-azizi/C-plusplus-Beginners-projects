@@ -71,11 +71,24 @@ registration(Login log)
     }
     else
     {
-        
+        outfile<<"\t"<<log.getID()<<" : "<<log.getPW() <<endl <<endl;
+        cout << "\t User Registered Successfuly!" <<endl;
     }
+    outfile.close();
 
     Sleep(3000);
 }
+
+
+
+login()
+{
+    system("cls");
+    string id, pw;
+    cout << "\t Enter Login ID: ";
+    Sleep(5000);
+}
+
 
 
 int main()
@@ -100,7 +113,14 @@ int main()
 
         if(val == 1)
         {
-            
+            registration(log);
+        }
+
+
+
+        else if(val == 2)
+        {
+
         }
     }
 }
