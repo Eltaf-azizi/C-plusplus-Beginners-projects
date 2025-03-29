@@ -86,6 +86,27 @@ login()
     system("cls");
     string id, pw;
     cout << "\t Enter Login ID: ";
+    cin >> id;
+
+
+    cout << "\t Enter Password: ";
+    cin >> pw;
+
+    ifstream infile("D:/Login.txt");
+    
+    if(!infile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        string line;
+        bool found = false;
+        while(getline(infile, line))
+        {
+            
+        }
+    }
     Sleep(5000);
 }
 
