@@ -104,7 +104,25 @@ login()
         bool found = false;
         while(getline(infile, line))
         {
-            
+            stringstream ss;
+            ss << line;
+            string userID, userPW;
+            char delimiter;
+            ss>>userID<<delimiter>>userPW;
+
+
+            if(id == userID && pw == userPW)
+            {
+                found = true;
+
+                cout << "\t Please Wait";
+                for(int i=0; i<3; i++)
+                {
+
+                }
+
+                cout << "\t Welcome to This Page!" <<endl;
+            }
         }
     }
     Sleep(5000);
