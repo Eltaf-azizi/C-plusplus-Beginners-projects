@@ -52,13 +52,35 @@ class PhoneBook
 };
 
 
+
+addNo()
+{
+    
+}
+
+
 int main()
 {
     PhoneBook ph;
 
-
-    while()
+    bool exit = false;
+    while(!exit)
     {
-        
+        system("cls");
+        int val;
+        cout << "\t Welcome to Phone Book Management System" <<endl;
+        cout << "\t ***************************************" <<endl;
+        cout << "\t 1.Add Number" <<endl;
+        cout << "\t 2. Search Number" <<endl;
+        cout << "\t 3. Exit" <<endl;
+        cout << "\t Enter your Choice: ";
+        cin >> val;
+
+
+
+        if(val == 1)
+        {
+
+        }
     }
 }
