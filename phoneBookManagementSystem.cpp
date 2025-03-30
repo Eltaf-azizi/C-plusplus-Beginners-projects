@@ -30,10 +30,35 @@ class PhoneBook
     {
         Address = address;
     }
+
+
+
+    string getName()
+    {
+        return Name;
+    }
+
+
+    string getPhNo()
+    {
+        return PhNo;
+    }
+
+
+    string getAddress()
+    {
+        return Address;
+    }
 };
 
 
 int main()
 {
+    PhoneBook ph;
 
+
+    while()
+    {
+        
+    }
 }
