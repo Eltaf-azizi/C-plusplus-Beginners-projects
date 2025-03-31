@@ -53,9 +53,27 @@ class PhoneBook
 
 
 
-addNo()
+addNo(PhoneBook ph)
 {
+    system("cls");
+    string name, phNo, address;
+
+
+    cout << "\t Enter Name of User: ";
+    cin >> name;
+    ph.setName(name);
+
+
+    cout << "\t Enter Phone Number: ";
+    cin >> phNo;
+    ph.setPhNo(phNo);
+
+
+    cout << "\t Enter Address of User: ";
+    cin >> address;
+    ph.setAddress(address);
     
+    Sleep(4000);
 }
 
 
