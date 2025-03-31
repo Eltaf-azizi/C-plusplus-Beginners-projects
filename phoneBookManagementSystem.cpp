@@ -73,6 +73,18 @@ addNo(PhoneBook ph)
     cin >> address;
     ph.setAddress(address);
     
+    ofstream outfile("D:/PhoneBook.txt", ios::app);
+
+    if(!outfile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        outfile << "\t" << ph.getName() << " : " << ph.getPhNo() << " : " 
+        << ph.getAddress << endl <<endl;
+    }
+    outfile.close();
     Sleep(4000);
 }
 
@@ -98,7 +110,14 @@ int main()
 
         if(val == 1)
         {
+            addNo(ph);
+        }
 
+
+
+        else if(val == 2)
+        {
+            
         }
     }
 }
