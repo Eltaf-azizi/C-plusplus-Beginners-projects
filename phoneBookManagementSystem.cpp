@@ -82,10 +82,32 @@ addNo(PhoneBook ph)
     else
     {
         outfile << "\t" << ph.getName() << " : " << ph.getPhNo() << " : " 
-        << ph.getAddress << endl <<endl;
+        << ph.getAddress() << endl <<endl;
     }
     outfile.close();
+    cout << "\t Phone Number Added to Phone Book!";
     Sleep(4000);
+}
+
+
+
+searchNo()
+{
+    string name;
+    cout << "\t Enter Name of User: ";
+    cin >> name;
+
+    ifstream infile("D:/PhoneBook.txt");
+    if(!infile)
+    {
+        cout << "\t Error: File Can't Open!" <<endl;
+    }
+    else
+    {
+        string line;
+        bool found = false;
+        
+    }
 }
 
 
