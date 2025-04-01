@@ -166,5 +166,15 @@ int main()
         {
             searchNo();
         }
+
+
+
+        else if(val == 3)
+        {
+            system("cls");
+            exit = true;
+            cout << "\t Good Luck" <<endl;
+            Sleep(3000);
+        }
     }
 }
