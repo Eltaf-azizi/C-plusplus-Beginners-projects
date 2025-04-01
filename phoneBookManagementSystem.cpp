@@ -93,6 +93,7 @@ addNo(PhoneBook ph)
 
 searchNo()
 {
+    system("cls");
     string name;
     cout << "\t Enter Name of User: ";
     cin >> name;
@@ -119,9 +120,18 @@ searchNo()
 
             if(name == userName)
             {
-                
+                found = true;
+                cout << "\t" << userName << "\t" userPhNo << "\t" << userAddress <<endl;
             }
         }
+
+        if(!found)
+        {
+            cout << "\t User not Found In Phone Book!" <<endl;
+        }
+
+        infile.close();
+        Sleep(5000);
     }
 }
 
@@ -154,7 +164,7 @@ int main()
 
         else if(val == 2)
         {
-            
+            searchNo();
         }
     }
 }
