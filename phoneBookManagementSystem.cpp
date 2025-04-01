@@ -107,6 +107,21 @@ searchNo()
         string line;
         bool found = false;
         
+
+        while(getline(infile, line))
+        {
+            stringstream ss;
+            ss << line;
+            string userName, userPhNo, userAddress;
+            char delimiter;
+            ss >> userName >> delimiter >> userPhNo >> delimiter >> userAddress;
+
+
+            if(name == userName)
+            {
+                
+            }
+        }
     }
 }
 
