@@ -52,3 +52,23 @@ class Market
         return Price;
     }
 };
+
+
+
+
+int main()
+{
+    bool exit = false;
+
+    while(!exit)
+    {
+        system("cls");
+        cout << "Welcome to Super Market Management System" <<endl;
+        cout << "*****************************************" <<endl;
+        cout << "1. Add Items" <<endl;
+        cout << "2. Search Items" <<endl;
+        cout << "3. Exit" <<endl;
+        int val;
+        cin >> val;
+    }
+}
