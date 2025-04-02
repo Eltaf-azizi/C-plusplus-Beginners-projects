@@ -9,7 +9,7 @@ using namespace std;
 class Market
 {
     private:
-    string name;
+    string Name;
     int Quantity, Price;
     public:
     Market(): Name(""), Quantity(0), Price(0){}
@@ -28,9 +28,27 @@ class Market
     }
 
 
+    setPrice(int price)
+    {
+        Price = price;
+    }
+
+
 
     string getName()
     {
         return Name;
+    }
+
+    
+    int getQuant()
+    {
+        return Quantity;
+    }
+
+
+    int getPrice()
+    {
+        return Price;
     }
 };
