@@ -55,6 +55,28 @@ class Market
 
 
 
+addItem(Market m)
+{
+    string name;
+    int quant, price;
+
+    cout << "Enter Name of Item: ";
+    cin >> name;
+    m.setName(name);
+
+
+    cout << "Enter Quantity: ";
+    cin >> quantity;
+    m.setQuant(quant);
+
+
+    cout << "Enter Price: ";
+    cin >> price;
+    m.setPrice(price);
+}
+
+
+
 
 int main()
 {
