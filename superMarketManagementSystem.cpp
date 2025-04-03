@@ -90,6 +90,15 @@ addItem(Market m)
 
 
 
+search(Market m)
+{
+    string name;
+    cout << "Enter Name of Item: ";
+    cin >> name;
+
+    ifstream in("D:/Super Market.txt");
+}
+
 
 int main()
 {
@@ -114,6 +123,13 @@ int main()
             system("cls");
             addItem(m);
             Sleep(5000);
+        }
+
+
+
+        else if(val == 2)
+        {
+
         }
     }
 }
