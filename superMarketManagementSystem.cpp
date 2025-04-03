@@ -97,6 +97,26 @@ search(Market m)
     cin >> name;
 
     ifstream in("D:/Super Market.txt");
+
+    if(!in)
+    {
+        cout << "File Not Found: " <<endl;
+    }
+    else
+    {
+        string line;
+        bool found = false;
+
+        while(getline(in, line))
+        {
+            int pos = line.find(name);
+
+            if(pos != string::npos)
+            {
+                
+            }
+        }
+    }
 }
 
 
