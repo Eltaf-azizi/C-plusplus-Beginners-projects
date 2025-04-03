@@ -73,6 +73,19 @@ addItem(Market m)
     cout << "Enter Price: ";
     cin >> price;
     m.setPrice(price);
+
+    ofstream out("D:/Super Market.txt", ios::app);
+
+    if(!out)
+    {
+        cout << "File Can't Open!" <<endl;
+    }
+    else
+    {
+        out<< m.getName() << " , " << m.getQuant()<< " , "<< m.getPrice() <<endl;
+        cout << "Item Save Successfuly!" <<endl;
+    }
+    out.close();
 }
 
 
@@ -80,6 +93,7 @@ addItem(Market m)
 
 int main()
 {
+    Market m;
     bool exit = false;
 
     while(!exit)
@@ -90,7 +104,16 @@ int main()
         cout << "1. Add Items" <<endl;
         cout << "2. Search Items" <<endl;
         cout << "3. Exit" <<endl;
+        cout << "Enter Choice: ";
         int val;
         cin >> val;
+
+
+        if(val == 1)
+        {
+            system("cls");
+            addItem(m);
+            Sleep(5000);
+        }
     }
 }
