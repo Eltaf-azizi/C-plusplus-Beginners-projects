@@ -62,7 +62,21 @@ class Seats
         for(int row=0; row<5; row++)
         {
             cout << row + 1 << " ";
+
+            for(int col=0; col<10; col++)
+            {
+                if(Seat[row][col] == 1)
+                {
+                    cout << "- ";
+                }
+                else
+                {
+                    cout << "X ";
+                }
+            }
+            cout << "|" <<endl;
         }
+        cout << "-------------------------------";
     }
 };
 
@@ -81,6 +95,7 @@ int main()
     {
         cout << "Logged In Database!" <<endl;
     }
+    Sleep(3000);
 
     return 0;
 }
