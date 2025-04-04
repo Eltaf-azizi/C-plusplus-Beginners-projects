@@ -30,9 +30,26 @@ class Seats
 
     int getSeatStatus(int row, int seatNumber)
     {
+        if(row < 1 || row > 5 || seatNumber < 1 || seatNumber > 10)
+        {
+            return -1;
+        }
+
+        return Seat [row-1][seatNumber-1];
+    }
+
+    void reserveSeat(int row, int seatNumber)
+    {
+        if(row < 1 || row > 5 || seatNumber < 1 || seatNumber > 10)
+        {
+            return;
+        }
         
+        Seat [row-1][seatNumber-1] = 0;
     }
 };
+
+
 
 int main()
 {
