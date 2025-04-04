@@ -47,6 +47,23 @@ class Seats
         
         Seat [row-1][seatNumber-1] = 0;
     }
+
+    display()
+    {
+        cout << " ";
+
+        for(int i=0; i<10; i++)
+        {
+            cout << " " <<i+1;
+        }
+        cout <<endl;
+
+
+        for(int row=0; row<5; row++)
+        {
+            cout << row + 1 << " ";
+        }
+    }
 };
 
 
