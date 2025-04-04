@@ -113,8 +113,15 @@ search(Market m)
 
             if(pos != string::npos)
             {
-                
+                cout << "Item|Quant|Price" <<endl;
+                cout << line << endl;
+                found = true;
             }
+        }
+
+        if(!found)
+        {
+            cout << "Item Not Found!" <<endl;
         }
     }
 }
@@ -149,7 +156,19 @@ int main()
 
         else if(val == 2)
         {
+            system("cls");
+            search(m);
+            Sleep(5000);
+        }
 
+
+
+        else if(val == 3)
+        {
+            system("cls");
+            exit = true;
+            cout << "Good Luck!" <<endl;
+            Sleep(3000);
         }
     }
 }
