@@ -97,5 +97,22 @@ int main()
     }
     Sleep(3000);
 
+
+    if(mysql_query(conn, "CREATE TABLE IF NOT EXISTS Ticket (RowNumber INT, SeatNumber INT, Seat INT)"))
+    {
+        cout << "Error: " << mysql_error(conn) <<endl;
+    }
+
+    for(int row=1; row<=5; row++)
+    {
+        for(int seatNumber=1; seatNumber<=10; seatNumber++)
+        {
+            stringstream ss;
+            ss << "INSERT INTO Ticket (rowNumber, seatNumber, Seat)"
+            << "SELECT '" <<row << "', '" << seatNumber << "', '1' "
+        
+        }
+    }
+
     return 0;
 }
