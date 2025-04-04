@@ -12,6 +12,28 @@ const char* PW = "your password";
 const char* DB = "mydb";
 
 
+class Seats
+{
+    private:
+    int Seat[5][10];
+    public:
+    Seats()
+    {
+        for(int i=0; i<5; i++)
+        {
+            for(int j=0; j<10; j++)
+            {
+                Seat[i][j] = 1;
+            }
+        }
+    }
+
+    int getSeatStatus(int row, int seatNumber)
+    {
+        
+    }
+};
+
 int main()
 {
     MYSQL * conn;
@@ -23,7 +45,7 @@ int main()
     }
     else
     {
-        
+        cout << "Logged In Database!" <<endl;
     }
 
     return 0;
