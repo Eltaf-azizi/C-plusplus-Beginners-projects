@@ -87,6 +87,24 @@ class Seats
         {
             cout << "Error: " << mysql_error(conn) << endl;
         }
+        MYSQL_RES * result;
+        result = mysql_store_result(conn);
+
+        if(!result)
+        {
+            cout << "Error: " << mysql_error(conn) <<endl;
+        }
+        MYSQL_ROW row;
+
+        while((row=mysql_fetch_row(result)))
+        {
+            int rowNumber = atoi(row[0]);
+            int seatNumber = atoi(row[1]);
+            int seatStatus = atoi(row[2]);
+            Seat[rowNumber-1][seatNumber-1] = seatStatus;
+        }
+
+        mysql_free_result(result);
     }
 };
 
