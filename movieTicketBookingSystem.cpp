@@ -112,6 +112,7 @@ class Seats
 
 int main()
 {
+    Seats s;
     MYSQL * conn;
     conn = mysql_init(NULL);
 
@@ -168,7 +169,23 @@ int main()
 
         if(val == 1)
         {
+            s.getDB();
+            s.display();
 
+
+            int row, col;
+            cout << "Enter Row (1-5)";
+            cin >> row;
+            cout << "Enter Seat Number (1-10)";
+            cin >> col;
+
+
+            if(row < 1 || row > 5 || col < 1 || col > 10)
+            {
+                cout << "Invalid Row or Seat Number!" <<endl;
+                Sleep(3000);
+                continue;
+            }
         }
     }
     return 0;
