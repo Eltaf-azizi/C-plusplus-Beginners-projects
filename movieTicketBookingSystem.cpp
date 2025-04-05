@@ -78,6 +78,16 @@ class Seats
         }
         cout << "-------------------------------";
     }
+
+    getDB(MYSQL * conn)
+    {
+        string query = "SELECT RowNumber, SeatNumber, Seat FROM Ticket";
+
+        if(mysql_query(conn, query.c_str()))
+        {
+            cout << "Error: " << mysql_error(conn) << endl;
+        }
+    }
 };
 
 
@@ -128,6 +138,20 @@ int main()
     {
         system("cls");
         cout << endl;
+        cout << "Welcome to Movie Ticket Reservation System" <<endl;
+        cout << "******************************************" <<endl;
+        cout << "1. Reserve a Ticket" <<endl;
+        cout << "2. Exit" <<endl;
+        cout << "Enter your Choice: ";
+        int val;
+        cin >> val;
+
+
+
+        if(val == 1)
+        {
+
+        }
     }
     return 0;
 }
