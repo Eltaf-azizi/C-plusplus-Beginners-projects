@@ -109,10 +109,25 @@ int main()
         {
             stringstream ss;
             ss << "INSERT INTO Ticket (rowNumber, seatNumber, Seat)"
-            << "SELECT '" <<row << "', '" << seatNumber << "', '1' "
+            << "SELECT '" <<row << "', '" << seatNumber << "', '1' "\
+            << "WHERE NOT EXISTS (SELECT * FOM Ticket WHERE RowNumber = '" << row"' AND SeatNumber = '"<<seatNumber<<"')";
+            string insertQuery = ss.str();
+
+            if(mysql_query(conn, insertQuery.c_str()))
+            {
+                cout << "Error: " << mysql_error(conn);
+            }
         
         }
     }
+    Sleep(3000);
 
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        cout << endl;
+    }
     return 0;
 }
