@@ -186,6 +186,24 @@ int main()
                 Sleep(3000);
                 continue;
             }
+            int seatStatus = s.getSeatStatus(row, col);
+
+            if(seatStatus == -1)
+            {
+                cout << "Invalid Row or Seat Number!" <<endl;
+                Sleep(3000);
+                continue;
+            }
+
+            if(seatStatus == 0)
+            {
+                cout << "Sorry: Seat is already reserved!" << endl;
+                Sleep(3000);
+                continue;
+            }
+
+            s.reserveSeat();
+            stringstream ss;
         }
     }
     return 0;
