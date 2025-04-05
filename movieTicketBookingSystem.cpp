@@ -218,7 +218,21 @@ int main()
             Sleep(3000);
         }
 
+
+
+        else if(val == 2)
+        {
+            exit = true;
+            cout << "Good Luck!" <<endl;
+            Sleep(3000);
+        }
+        else
+        {
+            cout << "Invalid Input" <<endl;
+            Sleep(3000);
+        }
     }
+    mysql_close(conn);
     
     return 0;
 }
