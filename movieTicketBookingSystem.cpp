@@ -204,7 +204,21 @@ int main()
 
             s.reserveSeat();
             stringstream ss;
+            ss << "UPDATE Ticket SET Seat = 0 WHERE RowNumber = " << row << " AND SeatNumber =" << col;
+            string updat = ss.str();
+
+            if(mysql_query(conn, update.c_str()))
+            {
+                cout << "Error: " << mysql_error(conn) << endl;
+            }
+            else
+            {
+                cout << "Seat is Reserved Successfuly in Row " << row << " and Seat Number " << col << endl;
+            }
+            Sleep(3000);
         }
+
     }
+    
     return 0;
 }
