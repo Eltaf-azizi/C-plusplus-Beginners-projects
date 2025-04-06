@@ -66,7 +66,15 @@ char encrytCh(char ch, int shift)
 
 string encrypt(const string & password, int sift)
 {
-    
+    string encrypted = "";
+
+    for(int i=0; i<password.length(); i++)
+    {
+        char ch = password[i];
+        char encryptedChar = encryptCh(ch, shift);
+        encrypted + encryptedChar;
+    }
+    return encrypted;
 }
 
 
@@ -115,6 +123,26 @@ int main()
             cout << "Enter a String Password: ";
             cin >> pw;
             l.setPW(pw);
+
+            string encryptedPW = encrypt(l.getPW(), shift);
+
+            string Sup = "INSERT INTO password (Id, PW) VALUES ('"+l.getId()+"', '"+encryptedPW+"')";
+            if(mysql_query(conn, Sup.c_str()))
+            {
+                cout << "Error: " << mysql_error(conn) <<endl;
+            }
+            else
+            {
+                cout << "SignUp Successfuly!" <<endl;
+            }
+            Sleep(3000);
+        }
+
+
+
+        else if(val == 2)
+        {
+            
         }
     }// while
 
