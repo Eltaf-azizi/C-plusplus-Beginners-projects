@@ -18,6 +18,32 @@ class Login
     string userId, userPW;
     public:
     Login(): userId(""), userPW("") {}
+
+
+
+    void setId(string id)
+    {
+        userId = id;
+    }
+
+
+    void setPW(string pw)
+    {
+        userPW = pw;
+    }
+
+
+
+    string getId() const
+    {
+        return userId;
+    }
+
+
+    string getPW() const
+    {
+        return userPW;
+    }
 };
 
 
