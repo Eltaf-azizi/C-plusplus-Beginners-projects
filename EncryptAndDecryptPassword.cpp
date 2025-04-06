@@ -50,6 +50,21 @@ class Login
 
 int main()
 {
+    Login l;
+
+    MYSQL * conn;
+    conn = mysql_init(NULL);
+
+
+    if(!mysql_real_connect(conn, HOST, USER, PW, DB, 3306, NULL, 0))
+    {
+        cout << "Error: " << mysql_error(conn) <<endl;
+    }
+    else
+    {
+        cout << "Logged In Database!" <<endl;
+    }
+    Sleep(3000);
 
     return 0;
 }
