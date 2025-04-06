@@ -47,6 +47,14 @@ class Login
 };
 
 
+char encrytCh(char ch, int shift)
+{
+    if(isalpha(ch))
+    {
+        
+    }
+}
+
 
 int main()
 {
@@ -65,6 +73,7 @@ int main()
         cout << "Logged In Database!" <<endl;
     }
     Sleep(3000);
+    int shift = 3;
 
 
     bool exit = false;
@@ -82,7 +91,16 @@ int main()
 
         if(val == 1)
         {
+            system("cls");
+            string id, pw;
+            cout << "Enter ID for Sign Up: ";
+            cin >> id;
+            l.setId(id);
 
+
+            cout << "Enter a String Password: ";
+            cin >> pw;
+            l.setPW(pw);
         }
     }// while
 
