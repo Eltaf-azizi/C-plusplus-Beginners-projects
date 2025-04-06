@@ -66,5 +66,25 @@ int main()
     }
     Sleep(3000);
 
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        cout << "1. Sign Up" << endl;
+        cout << "2. Login" <<endl;
+        cout << "0. Exit" <<endl;
+        cout << "Enter your Choice: ";
+        int val;
+        cin >> val;
+
+
+
+        if(val == 1)
+        {
+
+        }
+    }// while
+
     return 0;
 }
