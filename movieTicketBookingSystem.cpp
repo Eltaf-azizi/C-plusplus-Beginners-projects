@@ -202,7 +202,7 @@ int main()
                 continue;
             }
 
-            s.reserveSeat();
+            s.reserveSeat(row, col);
             stringstream ss;
             ss << "UPDATE Ticket SET Seat = 0 WHERE RowNumber = " << row << " AND SeatNumber =" << col;
             string updat = ss.str();
