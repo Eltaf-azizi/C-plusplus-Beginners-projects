@@ -51,8 +51,22 @@ char encrytCh(char ch, int shift)
 {
     if(isalpha(ch))
     {
-        
+        char base = isupper(ch) ? 'A' : 'a';
+        char encrypted_ch = (ch - base + shift + 26) % 26 + base;
+        return encrypted_ch;
     }
+    if(isdigit(ch))
+    {
+        char encrypted_ch = (ch - '0' + shift + 10) % 10 + '0';
+        return encrypted_ch;
+    }
+    return ch;
+}
+
+
+string encrypt(const string & password, int sift)
+{
+    
 }
 
 
