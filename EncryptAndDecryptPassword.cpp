@@ -108,8 +108,26 @@ string decrypt(const string & encrypted, int shift)
         char decryptedChar = decryptCh(ch, shift);
         decrypt += decryptedChar;
     }
+    return decrypted;
 }
 
+
+string DBpw(MYSQL* conn, const string & id)
+{
+    string encryptedPW;
+
+    string get = "SELECT PW FROM password WHERE Id='"+id+"' ";
+    
+    if(mysql_query(conn, get.c_str()))
+    {
+        cout << "Error: " <<mysql_error(conn) <<endl;
+    }
+    else
+    {
+        MYSQL_RES * res;
+        res = mysql_store_result(conn);
+    }
+}
 
 int main()
 {
