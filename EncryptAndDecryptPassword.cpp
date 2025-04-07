@@ -78,6 +78,17 @@ string encrypt(const string & password, int sift)
 }
 
 
+char decryptCh(char ch, int shift)
+{
+    if(isalpha(ch))
+    {
+        char base = isupper(ch) ? 'A' : 'a';
+        char decrypted_ch = (ch - base - shift + 26) % 26 + base;
+        return decrypted_ch;
+    }
+}
+
+
 int main()
 {
     Login l;
@@ -142,7 +153,13 @@ int main()
 
         else if(val == 2)
         {
-            
+            system("cls");
+            string id, pw;
+            cout << "Enter ID: ";
+            cin >> id;
+            cout << "Enter Your Password: ";
+            cin >> pw;
+
         }
     }// while
 
