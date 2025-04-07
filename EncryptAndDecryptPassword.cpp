@@ -126,7 +126,18 @@ string DBpw(MYSQL* conn, const string & id)
     {
         MYSQL_RES * res;
         res = mysql_store_result(conn);
+
+        if(res)
+        {
+            MYSQL_ROW   row = mysql_result(conn);
+
+            if(row)
+            {
+                encryptedPW = row[0];
+            }
+        }
     }
+    return encryptedPW;
 }
 
 int main()
@@ -200,6 +211,19 @@ int main()
             cout << "Enter Your Password: ";
             cin >> pw;
 
+
+            string getDB = DBpw(conn, id);
+
+            if(!getDB.empty())
+            {
+                string decryptedPw = decrypt(getDB, shift);
+
+                if(decryptedPW == pw)
+                {
+                    cout <<endl;
+                    cout << "Welcome!" <<endl;
+                }
+            }
         }
     }// while
 
