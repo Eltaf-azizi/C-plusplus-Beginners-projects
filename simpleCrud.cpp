@@ -25,7 +25,25 @@ int main()
     else
     {
         cout <<endl <<endl;
-        cout << "\t\t Logged in" <<endl;
+        cout << "\t\t Logged in!" <<endl;
+    }
+    Sleep(3000);
+    bool exit = false;
+
+    while(!exit)
+    {
+        system("cls");
+        int val;
+        cout <<endl <<endl;
+        cout << "\t\t Welcome to MySQL Database" <<endl;
+        cout << "\t\t *************************" <<endl;
+        cout << "\t\t 1. Insert Data" <<endl;
+        cout << "\t\t 2. Delete DATA" <<endl;
+        cout << "\t\t 3. Update DATA" <<endl;
+        cout << "\t\t 4. Get/Read DATA" <<endl;
+        cout << "\t\t 0. Exit" <<endl;
+        cout << "\t\t Enter Choice: ";
+        cin val;
     }
 
     return 0;
