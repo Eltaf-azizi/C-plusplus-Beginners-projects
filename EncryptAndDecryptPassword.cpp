@@ -223,7 +223,23 @@ int main()
                     cout <<endl;
                     cout << "Welcome!" <<endl;
                 }
+                else
+                {
+                    cout << "Incorrect Password, Try again" <<endl;
+                }
             }
+            else
+            {
+                cout << "User Id Not Found. Try Again" <<endl;
+            }
+            sleep(5000);
+        }
+
+
+
+        else if(val == 0)
+        {
+            
         }
     }// while
 
