@@ -239,9 +239,12 @@ int main()
 
         else if(val == 0)
         {
-            
+            exit = true;
+            cout << "Bye!" <<endl;
+            Sleep(3000);
         }
     }// while
+    mysql_close(conn);
 
     return 0;
 }
