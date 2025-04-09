@@ -34,3 +34,16 @@ A collection of practical C++ examples ranging from fundamental programming conc
     g++ -std=c++17 *.cpp -o program
     ./program
 
+## Contribution Guidelines
+
+1. Fork the repository
+
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+
+3. Commit your changes (`git commit -m 'Add some feature'`)
+
+4. Push to the branch (`git push origin feature/your-feature`)
+5. 
+6. Open a Pull Request
+ <be>
+<h3 align="center" >Happy Coding!</h3>
