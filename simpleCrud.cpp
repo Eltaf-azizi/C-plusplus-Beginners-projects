@@ -90,8 +90,28 @@ int main()
 
             if(mysql_query(conn, del.c_str()))
             {
-                
+                cout <<endl <<endl;
+                cout << "\t\t Error: " <<mysql_error(conn);
             }
+            else
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Data Deleted Successfuly!" <<endl;
+            }
+            Sleep(3000);
+        }
+
+
+
+        else if(val == 3)
+        {
+            system("cls");
+            cout <<endl <<endl;
+            string id, grade;
+            cout << "\t\t Enter ID: ";
+            cin >> id;
+            cout << "\t\t Enter New Grade: ";
+            cin >> grade;
         }
     }
     mysql_close(conn);
