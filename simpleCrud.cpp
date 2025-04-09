@@ -72,6 +72,26 @@ int main()
                 cout <<endl <<endl;
                 cout << "\t\t Data inserted successfuly!" <<endl;
             }
+            Slep(3000);
+        }
+
+
+
+
+        else if(val == 2)
+        {
+            system("cls");
+            cout <<endl <<endl;
+            string id;
+            cout << "\t\t Enter ID: ";
+            cin >> id;
+
+            string del = "DELETE FROM student WHERE ID = '"+id+"'";
+
+            if(mysql_query(conn, del.c_str()))
+            {
+                
+            }
         }
     }
     mysql_close(conn);
