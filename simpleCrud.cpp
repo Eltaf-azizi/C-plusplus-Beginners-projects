@@ -44,6 +44,23 @@ int main()
         cout << "\t\t 0. Exit" <<endl;
         cout << "\t\t Enter Choice: ";
         cin val;
+
+
+
+        if(val == 1)
+        {
+            system("cls");
+            string id, name, grade;
+            cout <<endl <<endl;
+            cout << "\t\t Enter ID: ";
+            cin >> id;
+            cout << "\t\t Enter Name: ";
+            cin >> name;
+            cout << "\t\t Enter Grade: ";
+            cin >> grade;
+
+            string ins = "INSERT INTO student(ID, Name, Grade) VALUES()";
+        }
     }
 
     return 0;
