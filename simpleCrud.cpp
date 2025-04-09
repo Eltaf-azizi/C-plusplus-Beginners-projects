@@ -59,9 +59,22 @@ int main()
             cout << "\t\t Enter Grade: ";
             cin >> grade;
 
-            string ins = "INSERT INTO student(ID, Name, Grade) VALUES()";
+            string ins = "INSERT INTO student(ID, Name, Grade) VALUES('"+id+"', '"+name+"', '"+grade+"')";
+
+
+            if(mysql_query(conn, ins.c_str()))
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Error: " <mysql_error(conn) <<endl;
+            }
+            else
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Data inserted successfuly!" <<endl;
+            }
         }
     }
+    mysql_close(conn);
 
     return 0;
 }
