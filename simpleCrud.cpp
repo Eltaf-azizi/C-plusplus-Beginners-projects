@@ -167,6 +167,27 @@ int main()
                 Sleep(10000);
             }
         }
+
+
+
+
+        else if(val == 0)
+        {
+            system("cls");
+            exit = true;
+            cout <<endl <<endl <<endl;
+            cout <<"\t\t BYE!" <<endl;
+            Sleep(3000);
+        }
+
+
+
+        else
+        {
+            cout <<endl <<endl;
+            cout << "\t\t Invalid Input!" <<endl;
+            Sleep(3000);
+        }
     }
     mysql_close(conn);
 
