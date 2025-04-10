@@ -151,7 +151,20 @@ int main()
                     MYSQL_ROW row;
                     cout <<endl <<endl;
                     cout << "\t\t ID\t\t Name\t\t Grade" <<endl;
+                    cout << "\t\t --\t\t ----\t\t -----" <<endl;
+
+
+                    while(row=mysql_fetch row(result))
+                    {
+                        for(int i=0; i<num; i++)
+                        {
+                            cout << "\t\t " <<row[i];
+                        }
+                        cout << endl;
+                    }
+                    mysql_free_result(result);
                 }
+                Sleep(10000);
             }
         }
     }
