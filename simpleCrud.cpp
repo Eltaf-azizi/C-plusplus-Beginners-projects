@@ -112,6 +112,27 @@ int main()
             cin >> id;
             cout << "\t\t Enter New Grade: ";
             cin >> grade;
+            string upd = "UPDATE student SET Grade = '"+grade+"' WHERE ID = '"+id+"' ";
+
+
+            if(mysql_query(conn, upd.c_str()))
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Error: "<<mysql_error(conn);
+            }
+            else
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Data Updated Successfuly!" <<endl;
+            }
+            Sleep(3000);
+        }
+
+
+
+        else if(val == 4)
+        {
+            
         }
     }
     mysql_close(conn);
