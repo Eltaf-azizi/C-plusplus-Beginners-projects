@@ -132,7 +132,27 @@ int main()
 
         else if(val == 4)
         {
-            
+            system("cls");
+            string get = "SELECT * FROM student";
+
+
+            if(mysql_query(conn, get.c_str()))
+            {
+                cout <<endl <<endl;
+                cout << "\t\t Error: "<<mysql_error(conn);
+            }
+            else
+            {
+                MYSQL_RES* result = mysql_store_result(conn); 
+
+                if(result)
+                {
+                    int num = sql_num_fields(result);
+                    MYSQL_ROW row;
+                    cout <<endl <<endl;
+                    cout << "\t\t ID\t\t Name\t\t Grade" <<endl;
+                }
+            }
         }
     }
     mysql_close(conn);
