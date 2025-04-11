@@ -48,11 +48,31 @@ class Car
     {
         return Model;
     }
+
+
+    int getRent()
+    {
+        return Rent;
+    }
+
+
+    bool getAvail()
+    {
+        return Avail;
+    }
 };
+
 
 
 int main()
 {
+    MYSQL* conn;
+    conn = mysql_init(NULL);
+
+    if(!mysql_real_connect(conn, HOST, USER, PW, DB, 3306, NULL, 0))
+    {
+        
+    }
 
     return 0;
 }
