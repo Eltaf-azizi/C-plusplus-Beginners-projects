@@ -23,7 +23,30 @@ class Car
     public:
     Car(int serial, string brand, string model, int rent, bool avail)
     {
-        
+        Serial = serial;
+        Brand = brand;
+        Model = model;
+        Rent = rent;
+        Avail = avail;
+    }
+
+
+    
+    int getSerial()
+    {
+        return Serial;
+    }
+
+
+    string getBrand()
+    {
+        return Rent;
+    }
+
+
+    string getModel()
+    {
+        return Model;
     }
 };
 
