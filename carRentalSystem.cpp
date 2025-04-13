@@ -136,6 +136,21 @@ int main()
         cout <<"0. Exit" <<endl;
         cin >> val;
         
+
+        if(val == 1)
+        {
+            int ser;
+            cout << "Enter Serial Number: ";
+            cin >> user;
+
+            stringstream ss;
+            ss << ser;
+            string toS = ss.str(;)
+            if(car1.getSerial() == ser)
+            {
+
+            }
+        }
     }
 
     mysql_close(conn);
