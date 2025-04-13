@@ -104,6 +104,22 @@ int main()
         system("cls");
         cout <<"Welcome to Car Rental System" <<endl;
         cout <<"****************************" <<endl;
+
+
+        string get = "SLECT * FROM cars";
+        if(mysql_query(conn, get.c_str()))
+        {
+            cout << "Error: "<<mysql_error(conn) <<endl;
+        }
+        else
+        {
+            MYSQL_RES * result = mysql_store_result(conn);
+
+            if(result)
+            {
+                int num = mysql_num_fields(result);
+            }
+        }
     }
 
     mysql_close(conn);
