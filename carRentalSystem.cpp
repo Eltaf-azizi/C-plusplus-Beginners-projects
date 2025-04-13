@@ -86,6 +86,26 @@ int main()
     string save2 = "INSERT INTO cars (Serial, Brand, Model, Rent, Avail) VALUES(223, 'Toyota', 'Yaris', 50, true)";
     string save3 = "INSERT INTO cars (Serial, Brand, Model, Rent, Avail) VALUES(323, 'Suzuki', 'Alto', 30, true)";
 
+
+    if (mysql_query(conn, save1.c_str()) || mysql_query(conn, save2.c_str()) || mysql_query(conn, save3.c_str()))
+    {
+        cout << "Error: " << mysql_error(conn) <<endl;
+    }
+    else
+    {
+        cout << "Data saved for cars" <<endl;
+    }
+    Sleep(5000);
+
+
+    bool exit = false;
+    while(!exit)
+    {
+        system("cls");
+        cout <<"Welcome to Car Rental System" <<endl;
+        cout <<"****************************" <<endl;
+    }
+
     mysql_close(conn);
 
     return 0;
