@@ -118,8 +118,24 @@ int main()
             if(result)
             {
                 int num = mysql_num_fields(result);
+                MYSQL_ROW row;
+
+                while(row=mysql_fetch_row(result))
+                {
+                    for(int i=0; i<num; i++)
+                    {
+                        cout << " "<<row[i];
+                    }
+                    cout <<endl;
+                }
+                mysql_free_result(result);
             }
         }
+        int val;
+        cout <<"1. Select Car" <<endl;
+        cout <<"0. Exit" <<endl;
+        cin >> val;
+        
     }
 
     mysql_close(conn);
