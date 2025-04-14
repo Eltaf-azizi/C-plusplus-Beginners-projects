@@ -75,6 +75,22 @@ bool isAvail(mySQL* conn, string toS)
 
     MYSQL_RES* result = mysql_store_result(conn);
 
+    if(result)
+    {
+        MYSQL_RES* mysql_store_result(conn);
+
+        if(row)
+        {
+            int availability = atoi(row[0]);
+            mysql_free_result(result);
+            return (availability==1);
+        }
+        mysql_free_result(result);
+    }
+    else
+    {
+        return false;
+    }
 }
 
 
