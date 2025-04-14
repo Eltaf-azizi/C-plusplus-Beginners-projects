@@ -63,6 +63,21 @@ class Car
 };
 
 
+bool isAvail(mySQL* conn, string toS)
+{
+    string comp = "SELECT Avail FROM cars WHERE = '"+tosS+"'";
+
+    if(mysql_query(conn, comp.c_str()))
+    {
+        cout << "Error: " <<mysq;_error(conn) <<endl;
+        return false;
+    }
+
+    MYSQL_RES* result = mysql_store_result(conn);
+
+}
+
+
 
 int main()
 {
@@ -145,7 +160,9 @@ int main()
 
             stringstream ss;
             ss << ser;
-            string toS = ss.str(;)
+            string toS = ss.str();
+
+
             if(car1.getSerial() == ser)
             {
 
