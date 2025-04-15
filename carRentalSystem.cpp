@@ -65,7 +65,7 @@ class Car
 
 bool isAvail(mySQL* conn, string toS)
 {
-    string comp = "SELECT Avail FROM cars WHERE = '"+tosS+"'";
+    string comp = "SELECT Avail FROM cars WHERE = '"+toS+"'";
 
     if(mysql_query(conn, comp.c_str()))
     {
@@ -235,12 +235,31 @@ int main()
                 {
                     string upd = "UPDATE cars Set Avail='0' WHERE Serial= '"+toS+"'";
 
+                    if(mysql_query(conn, upd.c_str()))
+                    {
+                        cout << "Error: " << mysql_error(conn);
+                    }
+                    else
+                    {
+                        cout << "You have selected following car: " <<endl;
+                        cout << car3.getBrand() " "<<car3.getModel() << " $" << car3.getRent() <<endl;
+                    }
                 }
                 else
                 {
                     cout << "Sorry this car is already booked" <<endl;
                 }
             }
+            Sleep(8000);
+        }
+
+
+
+        else if(val == 0)
+        {
+            exit = true;
+            cout << "BYE!" <<endl;
+            Sleep(3000);
         }
     }
 
