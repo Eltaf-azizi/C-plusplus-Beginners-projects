@@ -180,6 +180,7 @@ int main()
             string toS = ss.str();
 
 
+
             if(car1.getSerial() == ser)
             {
                 if(isAvail(conn, toS))
@@ -219,6 +220,21 @@ int main()
                         cout << "You have selected following car: " <<endl;
                         cout << car2.getBrand() " "<<car2.getModel() << " $" << car2.getRent() <<endl;
                     }
+                }
+                else
+                {
+                    cout << "Sorry this car is already booked" <<endl;
+                }
+            }
+
+
+
+            if(car3.getSerial() == ser)
+            {
+                if(isAvail(conn, toS))
+                {
+                    string upd = "UPDATE cars Set Avail='0' WHERE Serial= '"+toS+"'";
+
                 }
                 else
                 {
