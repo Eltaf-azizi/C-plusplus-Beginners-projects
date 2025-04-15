@@ -23,6 +23,25 @@ class Member
     {
         return name;
     }
+
+
+    int getAge()
+    {
+        return age;
+    }
+
+
+    bool getAttendance()
+    {
+        return attendance;
+    }
+
+
+
+    setAttendance(bool attendance)
+    {
+        this -> attendance = attendance;
+    }
 }
 
 
