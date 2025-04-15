@@ -87,6 +87,7 @@ bool isAvail(mySQL* conn, string toS)
         }
         mysql_free_result(result);
     }
+    
     else
     {
         return false;
@@ -181,7 +182,24 @@ int main()
 
             if(car1.getSerial() == ser)
             {
+                if(isAvail(conn, toS))
+                {
+                    string upd = "UPDATE cars Set Avail='0' WHERE Serial= '"+toS+"'";
 
+                    if(mysql_query(conn, upd.c_str()))
+                    {
+                        cout << "Error: " << mysql_error(conn);
+                    }
+                    else
+                    {
+                        cout << "You have selected following car: " <<endl;
+                        cout << car1.getBrand() " "<<car1.getModel() << " $" << car1.getRent() <<endl;
+                    }
+                }
+                else
+                {
+                    cout << "Sorry this car is already booked" <<endl;
+                }
             }
         }
     }
