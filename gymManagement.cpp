@@ -82,11 +82,31 @@ class Gym
                 total += fees;
             }
         }
+        cout << "Total Fees: " <<total <<endl <<endl;
     }
 };
 
 int main()
 {
+    cout << "**** Gym Management ****";
+
+
+    while(true)
+    {
+        cout << "1. Add Member" <<endl;
+        cout << "2. Mark Attendance: " <<endl;
+        cout << "3. Total Fees: " <<endl;
+        cout << "0. Exit" <<endl;
+        cout << "Enter Choice: ";
+        cin >> val;
+
+
+        
+        if(val == 1)
+        {
+            
+        }
+    }
 
     return 0;
 }
