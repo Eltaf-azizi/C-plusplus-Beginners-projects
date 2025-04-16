@@ -61,7 +61,26 @@ class Gym
     {
         for(int i=0; i<ve.size(); i++)
         {
-            
+            if(name==ve[i].getName())
+            {
+                ve[i].setAttendance(true);
+                cout << "Attendance marked for member: " <<ve[i].name <<endl;
+            }
+        }
+    }
+
+
+    fees()
+    {
+        int total = 0;
+
+        for(int i=0; i<ve.size(); i++)
+        {
+            if(ve[i].getAttendance())
+            {
+                int fees = getAge() >20? 200 : 100;
+                total += fees;
+            }
         }
     }
 };
