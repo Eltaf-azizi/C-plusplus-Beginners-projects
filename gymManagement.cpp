@@ -88,8 +88,9 @@ class Gym
 
 int main()
 {
+    Gym gym;
     cout << "**** Gym Management ****";
-
+    int val;
 
     while(true)
     {
@@ -104,7 +105,21 @@ int main()
         
         if(val == 1)
         {
-            
+            string name;
+            int age;
+            cout << "Enter name: ";
+            cin >> name;
+            cout << "Enter age: ";
+            cin >> age;
+            gym.add(name, age);
+        }
+
+
+
+        else if(val == 2)
+        {
+            string name;
+            cout << "Enter Name: ";
         }
     }
 
