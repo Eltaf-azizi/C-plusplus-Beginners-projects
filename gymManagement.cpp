@@ -45,6 +45,27 @@ class Member
 }
 
 
+
+class Gym
+{
+    private:
+    vector<member> ve;
+    public:
+    add(string name, int age)
+    {
+        Member member(name, age);
+        ve.push_back(member);
+        cout <<"Member Added" <<endl <<endl;
+    }
+    markAttendance(string name)
+    {
+        for(int i=0; i<ve.size(); i++)
+        {
+            
+        }
+    }
+};
+
 int main()
 {
 
