@@ -115,11 +115,30 @@ int main()
         }
 
 
-
         else if(val == 2)
         {
             string name;
             cout << "Enter Name: ";
+            cin >> name;
+            gym.markAttendance(name);
+        }
+
+
+        else if(val == 3)
+        {
+            gym.fees();
+        }
+
+
+        else if(val == 0)
+        {
+            exit(0);
+        }
+
+
+        else
+        {
+            cout << "Invalid input" <<endl <<endl;
         }
     }
 
