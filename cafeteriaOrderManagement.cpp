@@ -30,4 +30,23 @@ class Menu
     {
         return itemNo;
     }
+
+
+    int getPrice()
+    {
+        return price;
+    }
+};
+
+
+
+class Cafe
+{
+    private:
+    vector <Menu> ve;
+    public:
+    add(int ItemNo, string Item, int Price)
+    {
+        
+    }
 }
