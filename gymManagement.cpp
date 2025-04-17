@@ -64,7 +64,7 @@ class Gym
             if(name==ve[i].getName())
             {
                 ve[i].setAttendance(true);
-                cout << "Attendance marked for member: " <<ve[i].name <<endl;
+                cout << "Attendance marked for member: " <<ve[i].getName() <<endl;
             }
         }
     }
@@ -78,7 +78,7 @@ class Gym
         {
             if(ve[i].getAttendance())
             {
-                int fees = getAge() >20? 200 : 100;
+                int fees = ve[i].getAge() >20? 200 : 100;
                 total += fees;
             }
         }
@@ -105,6 +105,7 @@ int main()
         
         if(val == 1)
         {
+            system("cls");
             string name;
             int age;
             cout << "Enter name: ";
@@ -117,6 +118,7 @@ int main()
 
         else if(val == 2)
         {
+            system("cls");
             string name;
             cout << "Enter Name: ";
             cin >> name;
@@ -126,6 +128,7 @@ int main()
 
         else if(val == 3)
         {
+            system("cls");
             gym.fees();
         }
 
